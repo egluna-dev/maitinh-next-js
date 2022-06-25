@@ -11,8 +11,7 @@
   margin: 1rem auto;
 }
 
-.line {
-  font-size: 1rem;
-  color: black;
-  width: 50%;
+.heading {
+  padding: 2rem auto;
+  font-size: 2.75rem;
 }

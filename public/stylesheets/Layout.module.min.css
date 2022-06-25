@@ -6,4 +6,6 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  outline: 4px solid #f7aa58;
+  outline-offset: -1.25rem;
 }
