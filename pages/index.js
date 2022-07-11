@@ -10,10 +10,10 @@ export default function Home() {
 
   return (
     <Layout title='Mai Tinh | Coming Soon!'>
-      <Image src='/logos/MaiTinhColor-01.png' width={233} height={200} alt='Mai Tinh'/>
+      <Image src='/logos/MaiTinhColor-01.png' width={175} height={150} alt='Mai Tinh'/>
 
       <div className={styles.main}>
-        <h2 className={styles.heading}>Coming Soon! </h2>
+        <h2 className={styles.heading}>Coming Soon!</h2>
         <h3>The website is on the way.</h3>
         <p>For children with ASD, language delay, and intellectual disabilities.</p>
         <p>Based in Melbourne, VIC.</p>

@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:wght@200&family=Prata&family=Urbanist:wght@200&display=swap");
+@media only screen and (min-width: 768px) {
+  .heading {
+    font-size: 2.441rem;
+  }
+}
+
 html,
 body {
   padding: 0;
