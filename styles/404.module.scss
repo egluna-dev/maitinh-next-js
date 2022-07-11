@@ -2,11 +2,24 @@
     align-items: center;
     justify-content: space-evenly;
     text-align: center;
-    height: 80vh;
+    height: 75vh;
     display: flex;
     flex-direction: column;
 }
 
 .image {
-    margin: 2rem auto;
+    margin: 4rem;
+}
+
+.link {
+    color: #707070;
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+    transition: all 400ms ease-in-out;
+    font-size: 1.25rem;
+    font-family: 'Urbanist', sans-serif;
+}
+
+.link:hover {
+    color: #9BDBF6;
 }
