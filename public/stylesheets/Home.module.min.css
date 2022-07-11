@@ -3,6 +3,7 @@
   flex-direction: column;
   text-align: center;
   margin: 0 auto;
+  width: 80%;
 }
 
 .main p {
@@ -15,5 +16,5 @@
 
 .heading {
   margin-top: 2rem;
-  font-size: 3.052rem;
+  font-size: 1.953;
 }
