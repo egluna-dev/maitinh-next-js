@@ -13,8 +13,8 @@ export default function Home() {
       <Image src='/logos/MaiTinhColor-01.png' width={200} height={170} alt='Mai Tinh'/>
 
       <div className={styles.main}>
-        <h2 className={styles.heading}>Coming Soon!</h2>
-        <h3>The website is on the way.</h3>
+        <h3 className={styles.heading}>Coming Soon!</h3>
+        <h4>The website is on the way.</h4>
         <p>For children with ASD, language delay, and intellectual disabilities.</p>
         <p>Based in Melbourne, VIC.</p>
       </div>

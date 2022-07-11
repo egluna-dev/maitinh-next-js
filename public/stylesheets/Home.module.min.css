@@ -1,6 +1,6 @@
-@media only screen and (min-width: 768px) {
-  .main .heading {
-    font-size: 2.441rem;
+@media only screen and (min-width: 500px) {
+  .main {
+    width: 80%;
   }
 }
 
@@ -9,7 +9,7 @@
   flex-direction: column;
   text-align: center;
   margin: 0 auto;
-  width: 80%;
+  width: 40vw;
 }
 
 .main p {
@@ -22,5 +22,4 @@
 
 .heading {
   margin-top: 2rem;
-  font-size: 1.953rem;
 }

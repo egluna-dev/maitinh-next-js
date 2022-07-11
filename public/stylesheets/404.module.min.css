@@ -2,13 +2,11 @@
   align-items: center;
   justify-content: space-evenly;
   text-align: center;
-  height: 75vh;
   display: flex;
   flex-direction: column;
-}
-
-.image {
-  margin: 4rem;
+  width: 40vw;
+  min-height: 25vh;
+  max-height: 100vh;
 }
 
 .link {
