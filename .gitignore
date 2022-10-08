@@ -15,6 +15,9 @@
 # production
 /build
 
+# Sanity CMS
+/violet-turkey
+
 # misc
 .DS_Store
 *.pem
@@ -30,3 +33,7 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# SSL Certificates
+*.txt
+*.key

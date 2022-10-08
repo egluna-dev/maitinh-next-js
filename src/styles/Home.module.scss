@@ -1,9 +1,12 @@
 .main {
+    display: flex;
+    flex-direction: column;
     text-align: center;
     margin: 0 auto;
+    width: 40vw;
 
     p {
-        margin: 2rem auto;
+        margin: 1rem auto;
     }
 }
 
@@ -12,6 +15,5 @@
 }
 
 .heading {
-    padding: 2rem auto;
-    font-size: 2.75rem;
+    margin-top: 2rem;
 }

@@ -35,3 +35,9 @@ export default function Layout({ title, keywords, description, children }) {
   )
 }
 
+Layout.defaultProps = {
+  title: 'Mai Tinh | Melbourne Early Childhood Intervention',
+  description: 'Early childhood intervention for children with ASD, language delay, and intellectual disabilities',
+  keywords: 'childhood, development, education, disabilities, autism, language delay, learning, children, Down Syndrome, intellectual disability'
+}
+

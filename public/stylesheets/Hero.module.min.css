@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:wght@200&family=Prata&family=Urbanist:wght@200&display=swap");
+.container {
+  background-image: url("../public/images/AutismBanner3.jpg");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: contain;
+  width: 100vw;
+  height: 550px;
+  z-index: 0;
+}
+
+.content {
+  color: #434343;
+}
+
+.content button {
+  background-color: #707070;
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: #FFFCF7;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+}
