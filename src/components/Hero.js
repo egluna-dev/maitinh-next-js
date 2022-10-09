@@ -1,17 +1,46 @@
-import Layout from "./Layout"
-import styles from "../styles/Hero.module.scss"
+/** @jsxImportSource theme-ui */ 
+import { Container, Button } from "theme-ui";
+import { BiDownArrow } from "react-icons/bi";
 
 export default function HeroSection() {
+    const styles = {
+        container: {
+            backgroundImage: 'url("/images/AutismBanner3.jpg")',
+            backgroundPosition: 'left',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            objectFit: 'contain',
+            width: '100%',
+            height: '70vh',
+            zIndex: 1,
+        },
+        button: {
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            height: '2.5rem',
+            width: '12rem',
+            alignItems: 'center',
+            fontWeight: 'bold'
+        },
+        content: {
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'flex-start',
+            justifyContent: 'space-evenly',
+            height: '75%',
+            width: '100%',
+            padding: '5rem'
+        }
+    }
     return (
-        <Layout>
-            <div className={styles.container}>
-                <div className={styles.content}>
-                    <h1>Early Childhood Intervention </h1>
-                    <h2>For Children with ASD</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium voluptatibus minus, earum voluptates dignissimos hic vitae impedit asperiores incidunt accusamus.</p>
-                    <button>Learn More</button>
-                </div>
+        <Container sx={styles.container}>
+            <div sx={styles.content}>
+                <h1>Early Childhood Intervention </h1>
+                <h2>Language delay, ASD, and intellectual disabilities</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium voluptatibus minus, earum voluptates dignissimos hic vitae impedit asperiores incidunt accusamus.</p>
+                <Button sx={styles.button} variant="secondary">Learn More <BiDownArrow /></Button>
             </div>
-        </Layout>
+        </Container>
     )
 }

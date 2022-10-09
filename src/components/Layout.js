@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import styles from '../styles/Layout.module.scss'
 
 export default function Layout({ title, keywords, description, children }) {
   return (
@@ -28,7 +27,7 @@ export default function Layout({ title, keywords, description, children }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
+      <main>
         {children}
       </main>
     </div>

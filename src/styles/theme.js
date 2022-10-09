@@ -24,7 +24,6 @@ export const theme = {
         background_light: '#FFFDFA',
         primary_dark: '#EEAC66', 
         primary_light: '#EFB77B',
-        black: '#434343',
         dark_grey: '#707070',
         light_grey: '#E7E7E7',
         primary_blue: '#A7E1F7',
@@ -39,15 +38,27 @@ export const theme = {
     },
     buttons: {
         primary: {
+            fontFamily: 'body',
+            fontWeight: 'normal',
             color: 'text',
+            alignItems: 'center',
+            borderRadius: '8px',
+            cursor: 'pointer',
             bg: 'primary_dark',
+            transition: 'all 250ms ease-in-out',
             '&:hover': {
-                bg: 'text'
+                bg: 'primary_light'
             }
         },
         secondary: {
+            fontFamily: 'body',
+            fontWeight: 'normal',
             color: 'background_light',
-            bg: 'primary_blue',
+            borderRadius: '8px',
+            alignItems: 'center',
+            cursor: 'pointer',
+            transition: 'all 250ms ease-in-out',
+            bg: 'dark_grey',
             '&:hover': {
                 bg: 'primary_dark',
 

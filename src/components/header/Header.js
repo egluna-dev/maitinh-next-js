@@ -2,24 +2,24 @@
 import { Link } from "react-scroll";
 import { Container, Flex, Button } from "theme-ui";
 import Logo from "components/Logo";
+import MobileDrawer from "./MobileDrawer";
 import headerData from "./headerData";
 
 export default function Header() {
     const styles = {
         header: {
-            zIndex: '1',
-            color: 'text',
-            height: '25vh',
+            zIndex: 5,
+            height: '20vh',
             width: '100%',
             bg: 'background_dark',
             fontWeight: 'bold',
-            width: '100%',
             display: 'flex',
             flexDirection: 'column',
-            alignItems: 'center',
+            alignItems: 'space-between',
             justifyContent: 'center',
+            borderRadius: '20px',
             boxShadow: '0.5px 0.5px 10px 0.5px rgba(0, 0, 0, 0.2)',
-            py: 4,
+            transition: 'all 200ms ease-in-out',
             '&:hover': {
                 bg: 'background_light'
             }
@@ -27,31 +27,47 @@ export default function Header() {
         container: {
             display: 'flex',
             flexDirection: 'row',
-            justifyContent: 'space-evenly',
+            alignItems: 'center',
+            alignContent: 'space-between',
+            justifyContent: 'space-around',
             height: '15rem',
             width: '100%',
-            backgroundColor: 'background-light',
-            margin: '0 auto'
+            margin: '0 auto',
+            '@media screen and (min-width: 1080px)': {
+                justifyContent: 'space-evenly',
+                width: '100%'
+            }
         },
         nav: {
-            display: 'flex',
+            display: 'none',
             flexDirection: 'row',
             width: '25%',
             fontFamily: 'body',
-            fontSize: 'h4',
+            fontSize: 'p',
             fontWeight: 'normal',
-            color: 'text'
+            color: 'text',
+            '@media screen and (min-width: 906px)': {
+                display: 'flex'
+            }
+        },
+        navLink: {
+            margin: '0 1rem',
+            whiteSpace: 'nowrap',
+            cursor: 'pointer',
+            '&:hover': {
+                color: 'primary_dark'
+            }
         }
     }
     
     return (
-        <header sx={styles.header}>
+        <header sx={styles.header} id="top">
             <Container sx={styles.container}>
                 <Flex as="nav" sx={styles.nav}>
                     {headerData.map((item, index) => (
                         <Link 
                             key={index} 
-                            sx={styles.nav} 
+                            sx={styles.navLink} 
                             activeClass="active" 
                             to={item.path} 
                             spy={true} 
@@ -63,7 +79,8 @@ export default function Header() {
                         </Link>
                     ))}
                 </Flex>
-                <Logo src='/logos/Secondary_Color.svg' height={100} width={100} alt='Mai Tinh Nguyen Logo'/>
+                <Logo src='/logos/Secondary_Color.svg' path="#!" height={80} width={80} alt='Mai Tinh Nguyen Logo'/>
+                <MobileDrawer />
             </Container>
         </header>
     )

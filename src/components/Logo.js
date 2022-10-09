@@ -2,9 +2,9 @@
 import Image from "next/image";
 import { Link } from "./Link";
 
-const Logo = ({ src, height, width, alt, ...rest }) => {
+const Logo = ({ src, path, height, width, alt, ...rest }) => {
   return (
-    <Link path="/" sx={{variant: 'links.logo', display: 'flex', cursor: 'pointer', mr: 15}} {...rest}>
+    <Link path={path} sx={{cursor: 'pointer'}} {...rest}>
         <Image src={src} width={width} height={height} alt={alt}/>
     </Link>
   

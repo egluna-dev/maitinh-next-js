@@ -8,37 +8,60 @@ const Footer = () => {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'space-evenly',
-            height: '25vh',
+            justifyContent: 'center',
+            alignItems: 'center',
+            height: '60vh',
             width: '100%',
             bg: 'dark_grey',
-            color: 'background_light'
+            color: 'background_light',
+            '@media screen and (min-width: 720px)': {
+                height: '30vh'
+            }
         },
         content: {
+            fontFamily: 'body',
             display: 'flex',
             flexDirection: 'column',
-            width: '80%',
-            height: '80%',
-            margin: '1rem 0'
+            justifyContent: 'space-evenly',
+            alignContent: 'space-evenly',
+            alignItems: 'center',
+            width:'90%',
+            height: '90%',
+            '@media screen and (min-width: 720px)': {
+                flexDirection: 'row'
+            }
         },
         subFooter: {
-            font: 'body',
+            fontFamily: 'body',
             fontSize: 'pre',
             display: 'flex',
             flexDirection: 'column',
-            alignItems: 'center',
             justifyContent: 'center',
+            alignItems: 'center',
             height: '8vh',
             width: '100%',
             bg: 'text',
             color: 'background_light'
+        },
+        footerLink: {
+            fontSize: 'p',
+            margin: '0.5rem 0',
+            transition: 'all 175ms ease-in-out',
+            '&:hover': {
+                color: 'primary_dark',
+            }
         }
     }
   return (
     <>
         <Container sx={styles.container}>
             <main sx={styles.content}>
-                <a href="">(+61) 0477 772 3076</a>
-                <Logo src='/logos/White_Full.svg' height={100} width={100} alt="Mai Tinh Nguyen"/>
+                <div sx={{display: 'flex', flexDirection: 'column'}}>
+                    <a href="tel:0477555555" sx={styles.footerLink}>Phone</a>
+                    <a href="mailto:email@test.com" sx={styles.footerLink}>Email</a>
+                </div>
+                <Logo src='/logos/White_Full.svg' sx={styles.footerLink} path="#top" height={125} width={125} alt="Mai Tinh Nguyen"/>
+                <Logo src="/SVG/to_top.svg" sx={styles.footerLink} path="#top" height={75} width={75} alt="Back to Top" />
             </main>
             
         </Container>
