@@ -56,34 +56,6 @@ const MobileDrawer = () => {
         drawerStyle={styles.drawer}
         closeBtnStyle={styles.close}
     >
-        <ScrollBars>
-            <Box sx={styles.content}>
-                <Box sx={styles.menu}>
-                    {headerData.map((item, index) => (
-                            <Link 
-                                key={index} 
-                                sx={styles.navLink} 
-                                activeClass="active" 
-                                to={item.path} 
-                                spy={true} 
-                                smooth={true} 
-                                offset={-70} 
-                                duration={500}
-                            >
-                                {item.label}
-                            </Link>
-                    ))}
-                </Box>
-                <Box sx={styles.menyFooter}>
-                    <Box sx={styles.social}>
-                        <a href="#">Link</a>
-                        <a href="#">Link</a>
-                        <a href="#">Link</a>
-                    </Box>
-                </Box>
-            </Box>
-        </ScrollBars>
-
     </Drawer>
   )
 }
