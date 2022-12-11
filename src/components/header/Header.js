@@ -52,10 +52,14 @@ export default function Header() {
         },
         navLink: {
             margin: '0 1rem',
+            fontSize: '20px',
             whiteSpace: 'nowrap',
+            transition: 'all 200ms ease-in-out',
             cursor: 'pointer',
             '&:hover': {
-                color: 'primary_dark'
+                color: 'primary_dark',
+                textDecoration: 'underline 2px solid orange',
+                textUnderlineOffset: '3px',
             }
         }
     }

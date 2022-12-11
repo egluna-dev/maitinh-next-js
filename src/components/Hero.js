@@ -27,10 +27,10 @@ export default function HeroSection() {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'flex-start',
-            justifyContent: 'space-evenly',
-            height: '75%',
+            justifyContent: 'center',
+            height: '50vh',
             width: '100%',
-            padding: '5rem'
+            padding: '3rem'
         }
     }
     return (
