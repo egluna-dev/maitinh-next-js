@@ -5,6 +5,8 @@ import { Container } from "theme-ui";
 const Footer = () => {
     const styles = {
         container: {
+            position: 'relative',
+            marginTop: '-2rem',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'space-evenly',
@@ -13,6 +15,9 @@ const Footer = () => {
             height: '60vh',
             width: '100%',
             bg: 'dark_grey',
+            borderRadius: '15px',
+            boxShadow: '0.5px 0.5px 10px 0.5px rgba(0, 0, 0, 0.2)',
+            zIndex: -1,
             color: 'background_light',
             '@media screen and (min-width: 720px)': {
                 height: '30vh'
@@ -32,15 +37,20 @@ const Footer = () => {
             }
         },
         subFooter: {
+            position: 'relative',
+            marginTop: '-2rem',
+            paddingTop: '2rem',
+            borderRadius: '15px',
             fontFamily: 'body',
             fontSize: 'pre',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
-            height: '8vh',
+            height: '10vh',
             width: '100%',
             bg: 'text',
+            zIndex: -2,
             color: 'background_light'
         },
         footerLink: {

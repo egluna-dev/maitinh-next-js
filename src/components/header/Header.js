@@ -8,7 +8,8 @@ import headerData from "./headerData";
 export default function Header() {
     const styles = {
         header: {
-            zIndex: 5,
+            position: 'relative',
+            marginBottom: '-2rem',
             height: '20vh',
             width: '100%',
             bg: 'background_dark',
@@ -17,9 +18,10 @@ export default function Header() {
             flexDirection: 'column',
             alignItems: 'space-between',
             justifyContent: 'center',
-            borderRadius: '20px',
+            borderRadius: '15px',
             boxShadow: '0.5px 0.5px 10px 0.5px rgba(0, 0, 0, 0.2)',
             transition: 'all 200ms ease-in-out',
+            zIndex: 5,
             '&:hover': {
                 bg: 'background_light'
             }
