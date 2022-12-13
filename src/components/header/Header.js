@@ -84,7 +84,6 @@ export default function Header() {
                     ))}
                 </Flex>
                 <Logo src='/logos/Secondary_Color.svg' path="#!" height={80} width={80} alt='Mai Tinh Nguyen Logo'/>
-                <MobileDrawer />
             </Container>
         </header>
     )

@@ -11,7 +11,7 @@ export default function HeroSection() {
             backgroundSize: 'cover',
             objectFit: 'contain',
             width: '100%',
-            height: '70vh',
+            height: '100vh',
             zIndex: 1,
         },
         button: {
