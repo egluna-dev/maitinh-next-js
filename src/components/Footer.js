@@ -50,7 +50,7 @@ const Footer = () => {
             height: '10vh',
             width: '100%',
             bg: 'text',
-            zIndex: -2,
+            zIndex: -4,
             color: 'background_light'
         },
         footerLink: {
