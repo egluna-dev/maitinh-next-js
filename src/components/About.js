@@ -17,7 +17,7 @@ export default function AboutSection() {
             backgroundSize: 'cover',
             boxShadow: '0px 0px 0px 1px #fff inset',
             objectFit: 'fill',
-            width: '100%',
+            width: '95%',
             padding: '1rem',
             borderRadius: '15px',
             zIndex: -1,
