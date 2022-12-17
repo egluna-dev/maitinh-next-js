@@ -7,5 +7,25 @@
     "emmet.triggerExpansionOnTab": true,
     "files.associations": {
         "*html": "html"
-    }
+    },
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#ffc177",
+        "activityBar.background": "#ffc177",
+        "activityBar.foreground": "#15202b",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#009f57",
+        "activityBarBadge.foreground": "#e7e7e7",
+        "commandCenter.border": "#15202b99",
+        "sash.hoverBorder": "#ffc177",
+        "statusBar.background": "#ffaa44",
+        "statusBar.foreground": "#15202b",
+        "statusBarItem.hoverBackground": "#ff9311",
+        "statusBarItem.remoteBackground": "#ffaa44",
+        "statusBarItem.remoteForeground": "#15202b",
+        "titleBar.activeBackground": "#ffaa44",
+        "titleBar.activeForeground": "#15202b",
+        "titleBar.inactiveBackground": "#ffaa4499",
+        "titleBar.inactiveForeground": "#15202b99"
+    },
+    "peacock.color": "#FFAA44"
 }
