@@ -11,13 +11,13 @@ const Footer = () => {
             flexDirection: 'column',
             alignItems: 'space-evenly',
             justifyContent: 'center',
+            marginBottom: '-2rem',
             alignItems: 'center',
-            height: '60vh',
             width: '100%',
             bg: 'dark_grey',
             borderRadius: '15px',
             boxShadow: '0.5px 0.5px 10px 0.5px rgba(0, 0, 0, 0.2)',
-            zIndex: -4,
+            zIndex: -1,
             color: 'background_light',
             '@media screen and (min-width: 720px)': {
                 height: '30vh'
@@ -37,20 +37,19 @@ const Footer = () => {
             }
         },
         subFooter: {
+            display: 'flex',
+            flexDirection: 'column',
             position: 'relative',
-            marginTop: '-2rem',
-            paddingTop: '2rem',
+            boxShadow: '0.5px 0.5px 10px 0.5px rgba(0, 0, 0, 0.2)',
             borderRadius: '15px',
             fontFamily: 'body',
             fontSize: 'pre',
-            display: 'flex',
-            flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
-            height: '10vh',
             width: '100%',
+            minHeight: '7vh',
             bg: 'text',
-            zIndex: -4,
+            zIndex: 1,
             color: 'background_light'
         },
         footerLink: {

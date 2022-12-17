@@ -1,6 +1,6 @@
 /** @jsxImportSource theme-ui */
 import { Container } from "theme-ui";
-import { BsArrowRightShort } from "react-icons/bs";
+import { RiArrowRightSFill } from "react-icons/ri";
 import Logo from "./Logo";
 import Image from "next/image";
 
@@ -24,15 +24,16 @@ export default function AboutSection() {
         },
         content: {
             position: 'relative',
-            top: '1rem',
+            top: '0.5rem',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'space-evenly',
             justifyContent: 'flex-start',
+            boxShadow: '0px 0px 0px 1px #fff inset',
             height: '100%',
             width: '100%',
             padding: '3rem',
-            border: '1px solid',
+            border: '1.5px solid',
             borderColor: '#707070',
             borderRadius: '15px',
             wordWrap: 'break-word'
@@ -66,20 +67,22 @@ export default function AboutSection() {
             width: '100%'
         },
         aboutPoint: {
-            fontSize: '18px',
             display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'space-evenly',
-            maxWidth: '80%'
+            fontSize: '18px',
+            '& p': {
+                position: 'relative',
+                bottom: '2px',
+                marginLeft: '1rem'
+            }
         }
     }
     return (
         <Container sx={styles.container}>
             <div sx={styles.content}>
                 <div sx={styles.row1}>
-                    <Image sx={styles.profile} src="/images/profilephoto.jpg" width={250} height={350} alt="Mai Tinh Nguyen" />
+                    <Image sx={styles.profile} src="/images/profilephoto.jpg" width={275} height={375} alt="Mai Tinh Nguyen" />
                     <div sx={styles.row1top}>
-                        <h2>Mai Tinh Nguyen</h2>
+                        <h3>Mai Tinh Nguyen</h3>
                         <h4>Early Intervention Specialist</h4>
                     </div>
 
@@ -96,14 +99,14 @@ export default function AboutSection() {
                         About Myself
                     </h3>
                     <div sx={styles.aboutPoint}>
-                        <BsArrowRightShort />
+                        <RiArrowRightSFill />
                         <p>
                             Bachelor of Special Education,
                             Ho Chi Minh City School of Education 2010
                         </p>
                     </div>
                     <div sx={styles.aboutPoint}>
-                        <BsArrowRightShort />
+                        <RiArrowRightSFill />
                         <p>
                             Master&apos;s Degree,
                             Inclusive and Special Education,
@@ -111,7 +114,7 @@ export default function AboutSection() {
                         </p>
                     </div>
                     <div sx={styles.aboutPoint}>
-                        <BsArrowRightShort />
+                        <RiArrowRightSFill />
                         <p>
                             Fluent in Vietnamese and English.
                         </p>

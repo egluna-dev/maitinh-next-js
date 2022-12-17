@@ -1,4 +1,4 @@
-/** @jsxImportSource theme-ui */ 
+/** @jsxImportSource theme-ui */
 import { Link } from "react-scroll";
 import { Container, Flex, Button } from "theme-ui";
 import Logo from "components/Logo";
@@ -7,10 +7,22 @@ import headerData from "./headerData";
 
 export default function Header() {
     const styles = {
+        container: {
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+            alignContent: 'space-between',
+            justifyContent: 'space-around',
+            width: '100%',
+            margin: '0 auto',
+            '@media screen and (min-width: 1080px)': {
+                justifyContent: 'space-evenly',
+                width: '100%'
+            }
+        },
         header: {
             position: 'relative',
             marginBottom: '-2rem',
-            height: '20vh',
             width: '100%',
             bg: 'background_dark',
             fontWeight: 'bold',
@@ -19,25 +31,13 @@ export default function Header() {
             alignItems: 'space-between',
             justifyContent: 'center',
             borderRadius: '15px',
+            minHeight: '15vh',
+            padding: '1.5rem 0',
             boxShadow: '0.5px 0.5px 10px 0.5px rgba(0, 0, 0, 0.2)',
             transition: 'all 200ms ease-in-out',
-            zIndex: 5,
+            zIndex: 1,
             '&:hover': {
                 bg: 'background_light'
-            }
-        },
-        container: {
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-            alignContent: 'space-between',
-            justifyContent: 'space-around',
-            height: '15rem',
-            width: '100%',
-            margin: '0 auto',
-            '@media screen and (min-width: 1080px)': {
-                justifyContent: 'space-evenly',
-                width: '100%'
             }
         },
         nav: {
@@ -65,27 +65,27 @@ export default function Header() {
             }
         }
     }
-    
+
     return (
         <header sx={styles.header} id="top">
             <Container sx={styles.container}>
                 <Flex as="nav" sx={styles.nav}>
                     {headerData.map((item, index) => (
-                        <Link 
-                            key={index} 
-                            sx={styles.navLink} 
-                            activeClass="active" 
-                            to={item.path} 
-                            spy={true} 
-                            smooth={true} 
-                            offset={-70} 
+                        <Link
+                            key={index}
+                            sx={styles.navLink}
+                            activeClass="active"
+                            to={item.path}
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
                             duration={500}
                         >
                             {item.label}
                         </Link>
                     ))}
                 </Flex>
-                <Logo src='/logos/Secondary_Color.svg' path="#!" height={80} width={80} alt='Mai Tinh Nguyen Logo'/>
+                <Logo src='/logos/Secondary_Color.svg' path="#!" height={80} width={80} alt='Mai Tinh Nguyen Logo' />
             </Container>
         </header>
     )

@@ -1,10 +1,12 @@
-/** @jsxImportSource theme-ui */ 
+/** @jsxImportSource theme-ui */
 import { Container, Button } from "theme-ui";
 import { BiDownArrow } from "react-icons/bi";
 
 export default function HeroSection() {
     const styles = {
         container: {
+            display: 'flex',
+            flexDirection: 'column',
             backgroundImage: 'url("/images/AutismBanner3.jpg")',
             backgroundPosition: '75%',
             backgroundRepeat: 'no-repeat',
@@ -12,10 +14,9 @@ export default function HeroSection() {
             boxShadow: '0.5px 0.5px 10px 0.5px rgba(0, 0, 0, 0.2)',
             objectFit: 'fill',
             width: '100%',
-            height: '95vh',
             borderRadius: '15px',
             paddingTop: '2rem',
-            zIndex: 4,
+            zIndex: 1,
         },
         button: {
             display: 'flex',
@@ -32,7 +33,6 @@ export default function HeroSection() {
             flexDirection: 'column',
             alignItems: 'flex-start',
             justifyContent: 'flex-start',
-            height: '25vh',
             width: '100%',
             padding: '3rem',
             wordWrap: 'break-word'
