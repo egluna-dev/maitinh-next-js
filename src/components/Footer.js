@@ -15,6 +15,7 @@ const Footer = () => {
             alignItems: 'center',
             width: '100%',
             bg: 'dark_grey',
+            padding: '2rem',
             borderRadius: '15px',
             boxShadow: '0.5px 0.5px 10px 0.5px rgba(0, 0, 0, 0.2)',
             zIndex: -1,
