@@ -18,10 +18,10 @@ const Footer = () => {
             padding: '2rem',
             borderRadius: '15px',
             boxShadow: '0.5px 0.5px 10px 0.5px rgba(0, 0, 0, 0.2)',
-            zIndex: -1,
+            zIndex: 1,
             color: 'background_light',
             '@media screen and (min-width: 720px)': {
-                height: '30vh'
+                minHeight: '30vh'
             }
         },
         content: {
@@ -31,8 +31,7 @@ const Footer = () => {
             justifyContent: 'space-evenly',
             alignContent: 'space-evenly',
             alignItems: 'center',
-            width: '90%',
-            height: '90%',
+            width: '95%',
             '@media screen and (min-width: 720px)': {
                 flexDirection: 'row'
             }
@@ -48,9 +47,10 @@ const Footer = () => {
             justifyContent: 'center',
             alignItems: 'center',
             width: '100%',
-            minHeight: '7vh',
+            minHeight: '10vh',
             bg: 'text',
-            zIndex: 1,
+            zIndex: -2,
+            marginTop: '1.5rem',
             color: 'background_light'
         },
         footerLink: {

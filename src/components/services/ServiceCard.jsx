@@ -10,11 +10,15 @@ export default function ServiceCard({ title, imageSrc, content, imgAlt }) {
             backgroundColor: 'background_light',
             boxShadow: '0px 0px 0px 1px #fff inset',
             objectFit: 'fill',
-            width: '95%',
+            width: '90%',
+            minHeight: '40vh',
             padding: '1rem',
             border: '1px solid black',
-            margin: '1rem',
+            margin: '1rem auto',
             borderRadius: '15px',
+            '@media screen and (min-width: 720px)': {
+                margin: '2rem'
+            },
         },
         contentCard: {
             position: 'relative',
@@ -26,6 +30,7 @@ export default function ServiceCard({ title, imageSrc, content, imgAlt }) {
             boxShadow: '0px 0px 0px 1px #fff inset',
             padding: '2rem',
             wordWrap: 'break-word',
+
             '& h4': {
                 textAlign: 'left',
                 margin: '1.25rem 0'
@@ -41,7 +46,7 @@ export default function ServiceCard({ title, imageSrc, content, imgAlt }) {
     return (
         <Container sx={styles.container}>
             <div sx={styles.contentCard}>
-                <Image sx={styles.image} src={imageSrc} width={325} height={215} alt={imgAlt} />
+                <Image sx={styles.image} src={imageSrc} width={525} height={400} alt={imgAlt} />
                 <h4 sx={{ textAlign: 'left' }}>{title}</h4>
                 <p>
                     {content}

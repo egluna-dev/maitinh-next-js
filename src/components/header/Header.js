@@ -1,6 +1,6 @@
 /** @jsxImportSource theme-ui */
 import { Link } from "react-scroll";
-import { Container, Flex, Button } from "theme-ui";
+import { Container, Flex } from "theme-ui";
 import Logo from "components/Logo";
 import MobileDrawer from "./MobileDrawer";
 import headerData from "./headerData";
