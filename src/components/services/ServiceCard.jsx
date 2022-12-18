@@ -7,11 +7,13 @@ export default function ServiceCard({ title, imageSrc, content, imgAlt }) {
         container: {
             display: 'flex',
             flexDirection: 'column',
-            backgroundColor: 'background_dark',
+            backgroundColor: 'background_light',
             boxShadow: '0px 0px 0px 1px #fff inset',
             objectFit: 'fill',
-            width: '100%',
+            width: '95%',
             padding: '1rem',
+            border: '1px solid black',
+            margin: '1rem',
             borderRadius: '15px',
         },
         contentCard: {
@@ -23,9 +25,6 @@ export default function ServiceCard({ title, imageSrc, content, imgAlt }) {
             backgroundColor: 'background_light',
             boxShadow: '0px 0px 0px 1px #fff inset',
             padding: '2rem',
-            border: '1.5px solid',
-            borderColor: '#707070',
-            borderRadius: '15px',
             wordWrap: 'break-word',
             '& h4': {
                 textAlign: 'left',
@@ -35,7 +34,8 @@ export default function ServiceCard({ title, imageSrc, content, imgAlt }) {
         image: {
             borderRadius: '15px',
             border: '2px solid black',
-            marginBottom: '0.5rem'
+            marginBottom: '1.25rem',
+            padding: '1rem'
         }
     }
     return (
