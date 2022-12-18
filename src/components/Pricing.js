@@ -32,19 +32,22 @@ export default function PricingSection() {
             '& h3': {
                 textAlign: 'center',
                 marginBottom: '1.5rem'
+            },
+            '@media screen and (min-width: 720px)': {
+                width: '70%'
             }
         },
         imageContainer: {
-            position: 'relative',
-            height: '25vh',
-            width: '50%',
-            backgroundImage: 'url("/images/ChildrenLearning.jpg")',
-            backgroundPosition: '75%',
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover',
-            objectFit: 'fill',
+            display: 'flex',
+            justifyContent: 'center',
+            height: '100%',
+            width: '100%',
+            margin: '1rem auto',
             opacity: '0.5',
+            borderLeft: '10%'
         },
+
+
     }
     return (
         <Container sx={styles.container}>
@@ -59,7 +62,7 @@ export default function PricingSection() {
                 </p>
             </div>
             <div sx={styles.imageContainer}>
-                <h1></h1>
+                <Image src="/images/ChildrenLearning.jpg" height={300} width={350} alt="Children learning" />
             </div>
         </Container>
     )

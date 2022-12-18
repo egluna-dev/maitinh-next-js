@@ -28,6 +28,7 @@ export default function ServicesSection() {
             backgroundColor: 'background_light',
             boxShadow: '0px 0px 0px 1px #fff inset',
             width: '90%',
+            height: '100%',
             padding: '2rem',
             margin: '2rem',
             border: '1.5px solid',
@@ -38,26 +39,29 @@ export default function ServicesSection() {
                 textAlign: 'center',
                 marginBottom: '1.5rem'
             },
-            // '@media screen and (min-width: 720px)': {
-            //     minHeight: '40vh'
-            // }
+            '@media screen and (min-width: 720px)': {
+                width: '70%'
+            },
+
         },
         cardContainer: {
             display: 'flex',
             flexDirection: 'column',
+            height: '100%',
 
             '@media screen and (min-width: 720px)': {
                 flexDirection: 'row',
                 alignItems: 'center',
                 justifyContent: 'space-evenly',
                 alignItems: 'space-evenly',
-                margin: '3rem',
+                margin: '2rem',
                 width: '93%',
             }
         }
     }
+
     return (
-        <Container sx={styles.container}>
+        <Container sx={styles.container} >
             <div sx={styles.contentCard}>
                 <h3>Services and Support</h3>
                 <p>
@@ -79,6 +83,6 @@ export default function ServicesSection() {
                     />
                 ))}
             </div>
-        </Container>
+        </Container >
     )
 }

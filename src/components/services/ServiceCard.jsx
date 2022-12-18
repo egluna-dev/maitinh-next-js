@@ -7,22 +7,23 @@ export default function ServiceCard({ title, imageSrc, content, imgAlt }) {
         container: {
             display: 'flex',
             flexDirection: 'column',
+            justifyContent: 'center',
             backgroundColor: 'background_light',
             boxShadow: '0px 0px 0px 1px #fff inset',
             objectFit: 'fill',
             width: '90%',
-            minHeight: '40vh',
+            height: '100%',
             padding: '1rem',
             border: '1px solid black',
             margin: '1rem auto',
             borderRadius: '15px',
             '@media screen and (min-width: 720px)': {
-                margin: '2rem'
+                margin: '1.5rem',
+                width: '70%',
             },
         },
         contentCard: {
             position: 'relative',
-            top: '0.5rem',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
