@@ -46,9 +46,8 @@ export default function PricingSection() {
             opacity: '0.5',
             borderLeft: '10%'
         },
-
-
     }
+
     return (
         <Container sx={styles.container}>
             <div sx={styles.contentCard}>
