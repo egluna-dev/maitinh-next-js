@@ -13,7 +13,7 @@ export default function PricingSection() {
             boxShadow: '0px 0px 0px 1px #fff inset',
             padding: '1rem',
             borderRadius: '15px',
-            zIndex: 1,
+            zIndex: '2',
         },
         contentCard: {
             marginTop: '1rem',
@@ -39,12 +39,17 @@ export default function PricingSection() {
         },
         imageContainer: {
             display: 'flex',
-            justifyContent: 'center',
-            height: '100%',
-            width: '100%',
-            margin: '1rem auto',
+            flexDirection: 'column',
+            backgroundColor: 'white',
+            border: '1px solid black',
+            borderRadius: '15px',
+            width: '94%',
             opacity: '0.5',
-            borderLeft: '10%'
+            margin: '2rem auto',
+            zIndex: '-1',
+            '& img': {
+                borderRadius: '15px'
+            }
         },
     }
 
@@ -62,6 +67,21 @@ export default function PricingSection() {
             </div>
             <div sx={styles.imageContainer}>
                 <Image src="/images/ChildrenLearning.jpg" height={300} width={350} alt="Children learning" />
+            </div>
+            <div sx={styles.contentCard} >
+                <h3>Pricing Structure</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur,
+                    adipisicing elit. Possimus eligendi provident quae at aliquid est,
+                    modi dolore placeat impedit ipsa fugit, perspiciatis et!
+                    Nobis qui laboriosam numquam temporibus explicabo voluptate natus esse at tempora magnam,
+                    reprehenderit cum unde ipsam quam eveniet quasi, rerum,
+                    voluptatibus praesentium dolorum quod porro excepturi. Eos.
+                </p>
+                <div sx={styles.rates}>
+                    <h4>Hourly rate</h4>
+
+                </div>
             </div>
         </Container>
     )

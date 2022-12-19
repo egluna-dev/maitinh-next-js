@@ -1,6 +1,7 @@
 /** @jsxImportSource theme-ui */
 import { Container } from "theme-ui";
 import { RiArrowRightSFill } from "react-icons/ri";
+import { ImArrowRight2 } from "react-icons/im";
 import Logo from "./Logo";
 import Image from "next/image";
 

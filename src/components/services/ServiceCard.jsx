@@ -42,6 +42,7 @@ export default function ServiceCard({ title, imageSrc, content, imgAlt }) {
             borderRadius: '15px',
             boxShadow: '0px 0px 0px 1px #fff inset',
             backgroundColor: 'transparent',
+            opacity: '0.7',
             '& img': {
                 borderRadius: '15px',
                 height: '100%'
