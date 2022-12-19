@@ -38,17 +38,23 @@ export default function ServiceCard({ title, imageSrc, content, imgAlt }) {
             }
         },
         image: {
+            border: '1px solid black',
             borderRadius: '15px',
-            border: '2px solid black',
-            marginBottom: '1.25rem',
-            padding: '1rem'
+            boxShadow: '0px 0px 0px 1px #fff inset',
+            backgroundColor: 'transparent',
+            '& img': {
+                borderRadius: '15px',
+                height: '100%'
+            }
         }
     }
     return (
         <Container sx={styles.container}>
             <div sx={styles.contentCard}>
-                <Image sx={styles.image} src={imageSrc} width={525} height={400} alt={imgAlt} />
-                <h4 sx={{ textAlign: 'left' }}>{title}</h4>
+                <div sx={styles.image}>
+                    <Image src={imageSrc} width={550} height={425} alt={imgAlt} />
+                </div>
+                <h4 >{title}</h4>
                 <p>
                     {content}
                 </p>
