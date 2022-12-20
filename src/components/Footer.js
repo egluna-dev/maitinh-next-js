@@ -47,10 +47,11 @@ const Footer = () => {
             justifyContent: 'center',
             alignItems: 'center',
             width: '100%',
-            minHeight: '10vh',
+            minHeight: '12vh',
             bg: 'text',
             zIndex: -2,
-            marginTop: '1.5rem',
+            paddingTop: '1.5rem',
+            marginTop: -'1.5rem',
             color: 'background_light'
         },
         footerLink: {
