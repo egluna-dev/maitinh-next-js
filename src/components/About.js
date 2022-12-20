@@ -1,6 +1,5 @@
 /** @jsxImportSource theme-ui */
 import { Container } from "theme-ui";
-import { RiArrowRightSFill } from "react-icons/ri";
 import { ImArrowRight2 } from "react-icons/im";
 import Logo from "./Logo";
 import Image from "next/image";
@@ -16,12 +15,13 @@ export default function AboutSection() {
             backgroundPosition: '75%',
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
-            boxShadow: '0px 0px 0px 1px #fff inset',
+            boxShadow: '0.5px 0.5px 10px 0.5px rgba(0, 0, 0, 0.2)',
             objectFit: 'fill',
-            width: '95%',
-            padding: '1rem',
+            width: '100%',
+            marginTop: '-2rem',
+            padding: '3rem 1rem 3rem 1rem',
             borderRadius: '15px',
-            zIndex: -1,
+            zIndex: '-2'
         },
         content: {
             position: 'relative',
@@ -30,9 +30,8 @@ export default function AboutSection() {
             flexDirection: 'column',
             alignItems: 'space-evenly',
             justifyContent: 'flex-start',
-            boxShadow: '0px 0px 0px 1px #fff inset',
             height: '100%',
-            width: '100%',
+            width: '95%',
             padding: '3rem',
             border: '1.5px solid',
             borderColor: '#707070',
@@ -69,7 +68,7 @@ export default function AboutSection() {
         },
         aboutPoint: {
             display: 'flex',
-            fontSize: '18px',
+            fontSize: '15px',
             '& p': {
                 position: 'relative',
                 bottom: '2px',
@@ -100,14 +99,14 @@ export default function AboutSection() {
                         About Myself
                     </h3>
                     <div sx={styles.aboutPoint}>
-                        <RiArrowRightSFill />
+                        <ImArrowRight2 />
                         <p>
                             Bachelor of Special Education,
                             Ho Chi Minh City School of Education 2010
                         </p>
                     </div>
                     <div sx={styles.aboutPoint}>
-                        <RiArrowRightSFill />
+                        <ImArrowRight2 />
                         <p>
                             Master&apos;s Degree,
                             Inclusive and Special Education,
@@ -115,7 +114,7 @@ export default function AboutSection() {
                         </p>
                     </div>
                     <div sx={styles.aboutPoint}>
-                        <RiArrowRightSFill />
+                        <ImArrowRight2 xs={{ fontSize: '10px' }} />
                         <p>
                             Fluent in Vietnamese and English.
                         </p>
