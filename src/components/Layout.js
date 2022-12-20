@@ -23,6 +23,11 @@ export default function Layout({ title, keywords, description, children }) {
         <link rel="manifest" href="/manifest.json" />
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="Mai Tinh Nguyen || Early Childhood Intervention"/>
+        <meta property="og:description" content={description}/>
+        <meta property="og:url" content="https://www.maitinhnguyen.com" />
+        <meta property="og:site_name" content="Mai Tinh Nguyen"/>
         <meta name="theme-color" content="#ffffff" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon.ico" />
