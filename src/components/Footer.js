@@ -6,7 +6,7 @@ const Footer = () => {
     const styles = {
         container: {
             position: 'relative',
-            marginTop: '2rem',
+            marginTop: '-1.5rem',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'space-evenly',
@@ -15,10 +15,10 @@ const Footer = () => {
             alignItems: 'center',
             width: '100%',
             bg: 'dark_grey',
-            padding: '2rem',
+            padding: '3rem 2rem',
             borderRadius: '15px',
             boxShadow: '0.5px 0.5px 10px 0.5px rgba(0, 0, 0, 0.2)',
-            zIndex: 1,
+            zIndex: '-7',
             color: 'background_light',
             '@media screen and (min-width: 720px)': {
                 minHeight: '30vh'
@@ -47,11 +47,10 @@ const Footer = () => {
             justifyContent: 'center',
             alignItems: 'center',
             width: '100%',
-            minHeight: '12vh',
+            minHeight: '14vh',
             bg: 'text',
-            zIndex: -2,
+            zIndex: '-8',
             paddingTop: '1.5rem',
-            marginTop: -'1.5rem',
             color: 'background_light'
         },
         footerLink: {
