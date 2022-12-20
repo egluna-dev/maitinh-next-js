@@ -24,18 +24,17 @@ export default function ContactForm() {
 
             '& input': {
                 padding: '0.5rem',
-                margin: '0.5rem 0',
+                margin: '1rem 0',
                 fontFamily: 'body',
                 fontWeight: 'bold',
                 border: '1px solid black',
                 backgroundColor: 'light_grey',
                 borderRadius: '5px',
-                outline: 'none'
             },
             '& textarea': {
                 fontFamily: 'body',
                 padding: '0.5rem',
-                margin: '0.5rem 0',
+                margin: '1rem 0',
                 backgroundColor: 'light_grey',
                 fontWeight: 'bold',
                 borderRadius: '5px'
@@ -56,6 +55,14 @@ export default function ContactForm() {
             '&button:hover': {
                 backgroundColor: 'primary_light',
                 cursor: 'pointer'
+            }
+        },
+        formNames: {
+            display: 'flex',
+            flexDirection: 'row',
+            '& input': {
+                width: '100%',
+                marginRight: '1.5rem'
             }
         }
     }
