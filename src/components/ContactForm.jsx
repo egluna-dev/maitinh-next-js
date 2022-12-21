@@ -72,12 +72,12 @@ export default function ContactForm() {
             <p>* required field</p>
             <form action="" sx={styles.contactForm}>
                 <div sx={styles.formNames}>
-                    <input type="text" placeholder="First name *" />
+                    <input type="text" placeholder="First name *" required />
                     <input type="text" placeholder="Last name" />
                 </div>
-                <input type="email" placeholder="Email *" />
-                <input type="text" placeholder="Subject *" />
-                <textarea name="message" id="contact-form" placeholder="Message *" cols="30" rows="10"></textarea>
+                <input type="email" placeholder="Email *" required />
+                <input type="text" placeholder="Subject *" required />
+                <textarea name="message" id="contact-form" placeholder="Message *" cols="30" rows="10" required></textarea>
                 <button>Send</button>
             </form>
         </Container>
