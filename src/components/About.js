@@ -44,7 +44,10 @@ export default function AboutSection() {
             flexDirection: 'row',
             width: '100%',
             justifyContent: 'space-evenly',
-            alignItems: 'center'
+            alignItems: 'center',
+            '& img': {
+                opacity: '0.9'
+            }
         },
         row2: {
             position: 'relative',
