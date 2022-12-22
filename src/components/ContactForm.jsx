@@ -69,8 +69,8 @@ export default function ContactForm() {
 
     return (
         <Container sx={styles.container}>
-            <p>* required field</p>
             <form action="" sx={styles.contactForm}>
+                <p>* required field</p>
                 <div sx={styles.formNames}>
                     <input type="text" placeholder="First name *" required />
                     <input type="text" placeholder="Last name" />
