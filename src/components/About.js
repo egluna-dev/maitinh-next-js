@@ -123,7 +123,6 @@ export default function AboutSection() {
                         </p>
                     </div>
                 </div>
-
             </div>
             <Logo src="/SVG/scroll_down.svg" sx={{ alignSelf: 'center', marginTop: '2rem' }} path="#top" height={20} width={20} alt="Back to Top" />
         </Container>

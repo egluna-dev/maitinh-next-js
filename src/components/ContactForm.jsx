@@ -77,7 +77,7 @@ export default function ContactForm() {
                 </div>
                 <input type="email" placeholder="Email *" required />
                 <input type="text" placeholder="Subject *" required />
-                <textarea name="message" id="contact-form" placeholder="Message *" cols="30" rows="10" required></textarea>
+                <textarea name="message" id="contact-form" placeholder="Message *" cols="30" rows="10" maxLength="200" required></textarea>
                 <button>Send</button>
             </form>
         </Container>
