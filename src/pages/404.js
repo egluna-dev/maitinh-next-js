@@ -3,7 +3,6 @@ import ErrorLayout from "../components/ErrorLayout";
 import Link from 'next/link';
 import Image from "next/image";
 import styles from '../styles/404.module.scss';
-import { Box, Flex, Button, Heading } from "theme-ui";
 
 export default function NotFoundPage() {
   return (
@@ -14,7 +13,7 @@ export default function NotFoundPage() {
 
         <h4 sx={{fontFamily: 'body'}}>This page does not exist.</h4>
 
-        <Link href='/'><a className={styles.link}>Back Home</a></Link>
+        <Link href='/' passHref><a className={styles.link}>Back Home</a></Link>
       </div>
     </ErrorLayout>
   )
