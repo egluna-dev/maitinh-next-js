@@ -42,6 +42,13 @@ export default function ContactSection() {
             width: '95%',
         }
     }
+
+    const handleFormSubmit = (e) => {
+        e.preventDefault();
+        const data = new FormData(e.target);
+        console.log(data.entries);
+    }
+
     return (
         <Container sx={styles.container}>
             <div sx={styles.contentCard}>
@@ -55,7 +62,7 @@ export default function ContactSection() {
                 </p>
             </div>
             <div sx={styles.formContainer}>
-                <ContactForm />
+                <ContactForm handleSubmit={handleFormSubmit}/>
             </div>
         </Container>
     )

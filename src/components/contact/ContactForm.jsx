@@ -1,7 +1,9 @@
 /** @jsxImportSource theme-ui */
 import { Container } from "theme-ui";
+import FormInput from "./formInput";
+import { useRef } from "react";
 
-export default function ContactForm() {
+export default function ContactForm({ handleSubmit }) {
     const styles = {
         container: {
             position: 'relative',
@@ -25,13 +27,12 @@ export default function ContactForm() {
 
             '& input': {
                 padding: '0.5rem',
-                margin: '1rem 0',
+                margin: '0.75rem 0',
                 fontFamily: 'body',
                 fontWeight: 'bold',
                 border: '1px solid black',
                 backgroundColor: 'light_grey',
                 borderRadius: '5px',
-                zIndex: '10'
             },
             '& textarea': {
                 fontFamily: 'body',
@@ -62,23 +63,31 @@ export default function ContactForm() {
         formNames: {
             display: 'flex',
             flexDirection: 'row',
+            justifyContent: 'space-between',
             '& input': {
-                width: '100%',
-                marginRight: '1.5rem'
+                width: '90%',
             }
         }
     }
 
+    const firstNameRef = useRef();
+
+    const handleFormSubmit = (e) => {
+        e.preventDefault();
+        const data = new FormData(e.target);
+        console.log(data.entries);
+    }
+
     return (
         <Container sx={styles.container}>
-            <form action="" sx={styles.contactForm}>
+            <form action="" onSubmit={handleFormSubmit} sx={styles.contactForm}>
                 <p>* required field</p>
                 <div sx={styles.formNames}>
-                    <input type="text" placeholder="First name *" required />
-                    <input type="text" placeholder="Last name" />
+                    <FormInput type="text" name="firstName" placeholder="First name *" required />
+                    <FormInput type="text" name="lastName" placeholder="Last name" />
                 </div>
-                <input type="email" placeholder="Email *" required />
-                <input type="text" placeholder="Subject *" required />
+                <FormInput type="email" name="email" placeholder="Email *" required />
+                <FormInput type="text" name="subject" placeholder="Subject *" required />
                 <textarea name="message" id="contact-form" placeholder="Message *" cols="30" rows="10" maxLength="200" required></textarea>
                 <button>Send</button>
             </form>
