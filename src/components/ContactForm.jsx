@@ -14,13 +14,14 @@ export default function ContactForm() {
             marginTop: '-1.5rem',
             padding: '3.5rem 1rem 3rem 1rem',
             borderRadius: '15px',
-            zIndex: '-6',
+            zIndex: '7'
         },
         contactForm: {
             display: 'flex',
             flexDirection: 'column',
             padding: '0.5rem',
             width: '95%',
+            zIndex: '3',
 
             '& input': {
                 padding: '0.5rem',
@@ -30,6 +31,7 @@ export default function ContactForm() {
                 border: '1px solid black',
                 backgroundColor: 'light_grey',
                 borderRadius: '5px',
+                zIndex: '10'
             },
             '& textarea': {
                 fontFamily: 'body',

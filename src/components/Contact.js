@@ -14,7 +14,7 @@ export default function ContactSection() {
             marginTop: '-1.5rem',
             padding: '3.5rem 1rem 3rem 1rem',
             borderRadius: '15px',
-            zIndex: '-6',
+            zIndex: '0',
         },
         contentCard: {
             marginTop: '1rem',
@@ -39,7 +39,7 @@ export default function ContactSection() {
         },
         formContainer: {
             margin: '3rem 0',
-            width: '95%'
+            width: '95%',
         }
     }
     return (
