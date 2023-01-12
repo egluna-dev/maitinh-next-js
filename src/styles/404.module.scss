@@ -1,18 +1,18 @@
 .main {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     background-color: #FFF7E8;
-    outline: 3px solid #EFB77B;
-    outline-offset: -1rem;
+    outline: 4px solid #EFB77B;
+    outline-offset: -2rem;
     height: 100vh;
-    width: 100vw;
 }
 
 .container {
     display: flex;
+    justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
+    margin: 10%;
 }
 
 .link {

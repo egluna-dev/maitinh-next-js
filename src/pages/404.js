@@ -7,14 +7,14 @@ import styles from '../styles/404.module.scss';
 export default function NotFoundPage() {
   return (
     <ErrorLayout>
-      <div className={styles.container}>
-        <Image src='/logos/MaiTinhColor-01.png' width={200} height={170} alt='Mai Tinh Logo'/>
-        <h2>Whoops! 🤪</h2>
+        <div className={styles.container}>
+          <Image src='/logos/MaiTinhColor-01.png' width={200} height={170} alt='Mai Tinh Logo'/>
+          <h2>Whoops! 🤷‍♀️</h2>
 
-        <h4 sx={{fontFamily: 'body'}}>This page does not exist.</h4>
+          <h4 sx={{fontFamily: 'body'}}>This page does not exist.</h4>
 
-        <Link href='/' passHref><a className={styles.link}>Back Home</a></Link>
-      </div>
+          <Link href='/' passHref><a className={styles.link}>Back Home</a></Link>
+        </div>
     </ErrorLayout>
   )
 }

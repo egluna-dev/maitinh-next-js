@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/404.module.scss'
+import Header from "components/header/Header";
 
 export default function Layout({ title, keywords, description, children }) {
     return (
