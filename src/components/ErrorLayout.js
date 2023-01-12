@@ -3,7 +3,7 @@ import styles from '../styles/404.module.scss'
 
 export default function Layout({ title, keywords, description, children }) {
     return (
-        <div>
+        <>
             <Head>
                 <title>{title}</title>
                 <meta name='keywords' content={keywords} />
@@ -31,7 +31,7 @@ export default function Layout({ title, keywords, description, children }) {
             <main className={styles.main}>
                 {children}
             </main>
-        </div>
+        </>
     )
 }
 
