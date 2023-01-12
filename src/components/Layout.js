@@ -33,9 +33,9 @@ export default function Layout({ title, keywords, description, children }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
+      <>
         {children}
-      </main>
+      </>
     </>
   )
 }

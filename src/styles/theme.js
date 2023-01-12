@@ -8,10 +8,10 @@ export const theme = {
     fontSizes: {
         pre: '0.75rem',
         p: '14px',
-        h1: '3.052rem',
-        h2: '2.441rem',
-        h3: '1.953rem',
-        h4: '1.563rem'
+        h1: '3.052vw',
+        h2: '2.441vw',
+        h3: '1.953vw',
+        h4: '1.563vw'
     },
     fontWeights: {
         light: 200,

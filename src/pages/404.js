@@ -14,7 +14,7 @@ export default function NotFoundPage() {
           <h4 sx={{fontFamily: 'body'}}>This page does not exist.</h4>
 
           <Link href='/' passHref><a className={styles.link}>Back Home</a></Link>
-        </div>
+        </div> 
     </ErrorLayout>
   )
 }
