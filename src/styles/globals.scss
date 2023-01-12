@@ -57,5 +57,43 @@ p {
 
 small, .text_small {
   font-family: 'Urbanist', sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.8vw;
+}
+
+@media screen and (min-width: 1000px) {
+  h1 {
+    margin-top: 0;
+    font-size: 3.052vw;
+  }
+  
+  h2 {
+    font-size: 2.441vw;
+  }
+  
+  h3 {font-size: 1.953vw;}
+  
+  h4 {font-size: 1.563vw;}
+  
+  h5 {font-size: 1.25vw;}
+
+  p {
+    font-size: 2vmin;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  h1 {
+    margin-top: 0;
+    font-size: 3.052rem;
+  }
+  
+  h2 {
+    font-size: 2.441rem;
+  }
+  
+  h3 {font-size: 1.953rem;}
+  
+  h4 {font-size: 1.563rem;}
+  
+  h5 {font-size: 1.25rem;}
 }

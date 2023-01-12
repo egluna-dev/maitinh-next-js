@@ -17,6 +17,18 @@ export default function HeroSection() {
             borderRadius: '15px',
             paddingTop: '2rem',
             zIndex: 1,
+            '@media screen and (min-width: 550px)': {
+                height: '75vh'
+            },
+            '@media screen and (min-width: 700px)': {
+                height: '80vh'
+            },
+            '@media screen and (min-width: 850px)': {
+                height: '85vh'
+            },
+            '@media screen and (min-width: 1000px)': {
+                height: '80vh'
+            }
         },
         button: {
             display: 'flex',
@@ -35,12 +47,25 @@ export default function HeroSection() {
             justifyContent: 'flex-start',
             width: '100%',
             padding: '3rem',
-            wordWrap: 'break-word'
+            wordWrap: 'break-word',
+            '@media screen and (min-width: 550px)': {
+                padding: '3rem 5rem'
+            },
+            '@media screen and (min-width: 700px)': {
+                padding: '3rem 8rem'
+            },
+            '@media screen and (min-width: 850px)': {
+                padding: '5rem 10rem'
+            },
+            '@media screen and (min-width: 1200px)': {
+                width: '70%',
+                padding: '5rem 10rem'
+            }
         },
         p: {
             marginTop: '1rem',
             width: '60%'
-        }
+        },
     }
     return (
         <Container sx={styles.container}>
