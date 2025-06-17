@@ -78,7 +78,7 @@ export default function PricingSection() {
 
     return (
         <Container sx={styles.container}>
-            <div sx={styles.contentCard}>
+            <div style={styles.contentCard}>
                 <h3>Location and Pricing</h3>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -88,10 +88,10 @@ export default function PricingSection() {
                     ratione possimus dolores repellat repellendus quis nihil dicta, iste nam odio? Optio, dignissimos.
                 </p>
             </div>
-            <div sx={styles.imageContainer}>
+            <div style={styles.imageContainer}>
                 <Image src="/images/ChildrenLearning.jpg" height={300} width={350} alt="Children learning" />
             </div>
-            <div sx={styles.contentCard} >
+            <div style={styles.contentCard} >
                 <h3>Pricing Structure</h3>
                 <p>
                     Lorem ipsum dolor sit amet consectetur,
@@ -101,16 +101,16 @@ export default function PricingSection() {
                     reprehenderit cum unde ipsam quam eveniet quasi, rerum,
                     voluptatibus praesentium dolorum quod porro excepturi. Eos.
                 </p>
-                <div sx={styles.rates}>
+                <div style={styles.rates}>
                     <h4>Hourly rate</h4>
-                    <div sx={styles.aboutPoint}>
+                    <div style={styles.aboutPoint}>
                         <ImArrowRight2 />
                         <p>
                             $100 / hour
                         </p>
                     </div>
                     <h4>Traveling Fee</h4>
-                    <div sx={styles.aboutPoint}>
+                    <div style={styles.aboutPoint}>
                         <ImArrowRight2 />
                         <p>
                             $1/km from<br />Springvale, VIC

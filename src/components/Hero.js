@@ -17,7 +17,7 @@ export default function HeroSection() {
             borderRadius: '15px',
             paddingTop: '2rem',
             zIndex: 1,
-            '@media screen and (min-width: 550px)': {
+            '@media screen and (minWidth: 550px)': {
                 height: '75vh'
             },
             '@media screen and (min-width: 700px)': {
@@ -69,10 +69,10 @@ export default function HeroSection() {
     }
     return (
         <Container sx={styles.container}>
-            <div sx={styles.content}>
+            <div style={styles.content}>
                 <h1>Early Childhood Intervention</h1>
                 <h2>Language delay, ASD, and intellectual disabilities</h2>
-                <p sx={styles.p}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium voluptatibus minus, earum voluptates dignissimos hic vitae impedit asperiores incidunt accusamus.</p>
+                <p style={styles.p}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium voluptatibus minus, earum voluptates dignissimos hic vitae impedit asperiores incidunt accusamus.</p>
                 <Button sx={styles.button} variant="secondary">Learn More <BiDownArrow /></Button>
             </div>
         </Container>

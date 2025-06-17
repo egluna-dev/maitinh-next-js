@@ -11,7 +11,7 @@ export default function NotFoundPage() {
           <Image src='/logos/MaiTinhColor-01.png' width={200} height={170} alt='Mai Tinh Logo'/>
           <h2>Whoops! 🤷‍♀️</h2>
 
-          <h4 sx={{fontFamily: 'body'}}>This page does not exist.</h4>
+          <h4 style={{fontFamily: 'body'}}>This page does not exist.</h4>
 
           <Link href='/' passHref><a className={styles.link}>Back Home</a></Link>
         </div> 

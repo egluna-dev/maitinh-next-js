@@ -13,7 +13,7 @@ export default function Header() {
             alignContent: 'space-between',
             justifyContent: 'space-around',
             width: '100%',
-            margin: '0 auto',
+            margin: '3rem auto',
             '@media screen and (min-width: 1080px)': {
                 justifyContent: 'space-evenly',
                 width: '100%'
@@ -42,7 +42,7 @@ export default function Header() {
         nav: {
             display: 'none',
             flexDirection: 'row',
-            width: '25%',
+            width: '45%',
             fontFamily: 'body',
             fontSize: 'p',
             fontWeight: 'normal',
@@ -53,7 +53,7 @@ export default function Header() {
         },
         navLink: {
             margin: '0 1rem',
-            fontSize: '20px',
+            fontSize: '2rem',
             whiteSpace: 'nowrap',
             transition: 'all 200ms ease-in-out',
             cursor: 'pointer',
@@ -66,8 +66,9 @@ export default function Header() {
     }
 
     return (
-        <header sx={styles.header} id="top">
+        <header style={styles.header} id="top">
             <Container sx={styles.container}>
+                <Logo src='/logos/Secondary_Color.svg' path="#!" height={80} width={80} alt='Mai Tinh Nguyen Logo' />
                 <Flex as="nav" sx={styles.nav}>
                     {headerData.map((item, index) => (
                         <Link
@@ -84,7 +85,6 @@ export default function Header() {
                         </Link>
                     ))}
                 </Flex>
-                <Logo src='/logos/Secondary_Color.svg' path="#!" height={80} width={80} alt='Mai Tinh Nguyen Logo' />
             </Container>
         </header>
     )

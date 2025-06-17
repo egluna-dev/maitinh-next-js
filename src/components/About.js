@@ -108,34 +108,34 @@ export default function AboutSection() {
     }
     return (
         <Container sx={styles.container}>
-            <div sx={styles.content}>
-                <div sx={styles.row1}>
-                    <Image sx={styles.profile} src="/images/profilephoto.jpg" width={275} height={375} alt="Mai Tinh Nguyen" />
-                    <div sx={styles.row1top}>
+            <div style={styles.content}>
+                <div style={styles.row1}>
+                    <Image style={styles.profile} src="/images/profilephoto.jpg" width={275} height={375} alt="Mai Tinh Nguyen" />
+                    <div style={styles.row1top}>
                         <h3>Mai Tinh Nguyen</h3>
                         <h4>Early Intervention Specialist</h4>
                     </div>
 
                 </div>
-                <div sx={styles.row3Right}>
-                    <div sx={styles.row2}>
-                        <p sx={styles.text}>
+                <div style={styles.row3Right}>
+                    <div style={styles.row2}>
+                        <p style={styles.text}>
                             Hi, I am Mai Tinh and I specialize in the early intervention of children with Autism Spectrum Disorder (ASD), language delay, and intellectual disabilities such as Down Syndrome to help them develop into healthy and prosperous children.
                             Hamburger ribeye sirloin tenderloin capicola chicken, chuck ham hock swine picanha. Corned beef meatball bresaola strip steak.
                         </p>
                     </div>
-                    <div sx={styles.row3}>
+                    <div style={styles.row3}>
                         <h3>
                             About Myself
                         </h3>
-                        <div sx={styles.aboutPoint}>
+                        <div style={styles.aboutPoint}>
                             <ImArrowRight2 />
                             <p>
                                 Bachelor of Special Education,
                                 Ho Chi Minh City School of Education 2010
                             </p>
                         </div>
-                        <div sx={styles.aboutPoint}>
+                        <div style={styles.aboutPoint}>
                             <ImArrowRight2 />
                             <p>
                                 Master&apos;s Degree,
@@ -143,7 +143,7 @@ export default function AboutSection() {
                                 Monash University, Melbourne 2017
                             </p>
                         </div>
-                        <div sx={styles.aboutPoint}>
+                        <div style={styles.aboutPoint}>
                             <ImArrowRight2 xs={{ fontSize: '10px' }} />
                             <p>
                                 Fluent in Vietnamese and English.

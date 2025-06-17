@@ -65,17 +65,17 @@ const Footer = () => {
     return (
         <>
             <Container sx={styles.container}>
-                <main sx={styles.content}>
-                    <div sx={{ display: 'flex', flexDirection: 'column' }}>
-                        <a href="tel:0477555555" sx={styles.footerLink}>Phone</a>
-                        <a href="mailto:email@test.com" sx={styles.footerLink}>Email</a>
+                <main style={styles.content}>
+                    <div style={{ display: 'flex', flexDirection: 'column' }}>
+                        <a href="tel:0477555555" style={styles.footerLink}>Phone</a>
+                        <a href="mailto:email@test.com" style={styles.footerLink}>Email</a>
                     </div>
                     <Logo src='/logos/White_Full.svg' sx={styles.footerLink} path="#top" height={125} width={125} alt="Mai Tinh Nguyen" />
                     <Logo src="/SVG/to_top.svg" sx={styles.footerLink} path="#top" height={75} width={75} alt="Back to Top" />
                 </main>
 
             </Container>
-            <section sx={styles.subFooter}>
+            <section style={styles.subFooter}>
                 &copy; 2022 Mai Tinh. All Rights Reserved
             </section>
         </>
