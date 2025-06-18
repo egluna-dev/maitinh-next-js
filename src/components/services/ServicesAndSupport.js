@@ -1,5 +1,5 @@
 /** @jsxImportSource theme-ui */
-import { Container } from "theme-ui";
+import { CloseIcon, Container } from "theme-ui";
 import ServiceCard from "./ServiceCard";
 import Image from "next/image";
 import servicesData from "./servicesData";
@@ -27,7 +27,7 @@ export default function ServicesSection() {
             textAlign: 'left',
             justifyContent: 'center',
             backgroundColor: 'background_light',
-            width: '90%',
+            maxWidth: '75%',
             height: '100%',
             padding: '2rem',
             margin: '2rem',
@@ -47,6 +47,8 @@ export default function ServicesSection() {
         cardContainer: {
             display: 'flex',
             flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
             height: '100%',
 
             '@media screen and (min-width: 720px)': {
@@ -62,7 +64,7 @@ export default function ServicesSection() {
 
     return (
         <Container sx={styles.container} >
-            <div sx={styles.contentCard}>
+            <div style={styles.contentCard}>
                 <h3>Services and Support</h3>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -72,7 +74,7 @@ export default function ServicesSection() {
                     ratione possimus dolores repellat repellendus quis nihil dicta, iste nam odio? Optio, dignissimos.
                 </p>
             </div>
-            <div sx={styles.cardContainer}>
+            <div style={styles.cardContainer}>
                 {servicesData.map((item, index) => (
                     <ServiceCard
                         key={index}

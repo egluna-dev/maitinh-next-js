@@ -30,7 +30,7 @@ export default function ContactForm({ handleSubmit }) {
                 margin: '0.75rem 0',
                 fontFamily: 'body',
                 fontWeight: 'bold',
-                border: '1px solid black',
+                border: '1px solid red',
                 backgroundColor: 'light_grey',
                 borderRadius: '5px',
             },
@@ -80,9 +80,9 @@ export default function ContactForm({ handleSubmit }) {
 
     return (
         <Container sx={styles.container}>
-            <form action="" onSubmit={handleFormSubmit} sx={styles.contactForm}>
+            <form action="" onSubmit={handleFormSubmit} style={styles.contactForm}>
                 <p>* required field</p>
-                <div sx={styles.formNames}>
+                <div style={styles.formNames}>
                     <FormInput type="text" name="firstName" placeholder="First name *" required />
                     <FormInput type="text" name="lastName" placeholder="Last name" />
                 </div>

@@ -24,7 +24,7 @@ export default function ContactSection() {
             textAlign: 'left',
             justifyContent: 'center',
             backgroundColor: 'background_light',
-            width: '95%',
+            width: '55%',
             padding: '2rem',
             border: '1.25px solid',
             borderRadius: '15px',
@@ -39,7 +39,7 @@ export default function ContactSection() {
         },
         formContainer: {
             margin: '3rem 0',
-            width: '95%',
+            width: '55%',
         }
     }
 
@@ -51,17 +51,17 @@ export default function ContactSection() {
 
     return (
         <Container sx={styles.container}>
-            <div sx={styles.contentCard}>
+            <div style={styles.contentCard}>
                 <h3>Contact</h3>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Lorem poo ipsum dolor sit amet, consectetur adipisicing elit.
                     Earum, totam optio incidunt molestias voluptas fugiat asperiores sit magni excepturi commodi ea eius.
                     Neque, explicabo maxime!
                     Exercitationem totam doloremque ad voluptatum sint harum animi placeat delectus atque quia
                     ratione possimus dolores repellat repellendus quis nihil dicta, iste nam odio? Optio, dignissimos.
                 </p>
             </div>
-            <div sx={styles.formContainer}>
+            <div style={styles.formContainer}>
                 <ContactForm handleSubmit={handleFormSubmit}/>
             </div>
         </Container>
