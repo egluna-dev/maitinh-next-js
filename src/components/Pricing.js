@@ -24,9 +24,9 @@ export default function PricingSection() {
             alignItems: 'center',
             textAlign: 'left',
             justifyContent: 'center',
-            backgroundColor: 'background_light',
+            backgroundColor: '#FFF7E8',
             boxShadow: '0px 0px 0px 1px #fff inset',
-            width: '95%',
+            width: '70%',
             padding: '2rem',
             border: '1.25px solid',
             borderRadius: '15px',
@@ -44,14 +44,11 @@ export default function PricingSection() {
             flexDirection: 'column',
             backgroundColor: 'white',
             border: '1px solid black',
-            borderRadius: '15px',
-            width: '94%',
-            opacity: '0.65',
+            borderRadius: '5px',
+            width: '65%',
+            opacity: '0.8',
             margin: '2rem auto',
             zIndex: '-1',
-            '& img': {
-                borderRadius: '15px'
-            },
             '@media only screen and (min-width: 550px)': {
                 maxWidth: '50vw'
             }
@@ -89,7 +86,7 @@ export default function PricingSection() {
                 </p>
             </div>
             <div style={styles.imageContainer}>
-                <Image src="/images/ChildrenLearning.jpg" height={300} width={350} alt="Children learning" />
+                <Image src="/images/ChildrenLearning.jpg" height={2} width={3} alt="Children learning" loading="lazy" layout="responsive" sizes="(max-width: 500px), 50vw, 20vw" style={{borderRadius: "5px"}}/>
             </div>
             <div style={styles.contentCard} >
                 <h3>Pricing Structure</h3>
@@ -106,14 +103,14 @@ export default function PricingSection() {
                     <div style={styles.aboutPoint}>
                         <ImArrowRight2 />
                         <p>
-                            $100 / hour
+                            $150 / hour
                         </p>
                     </div>
                     <h4>Traveling Fee</h4>
                     <div style={styles.aboutPoint}>
                         <ImArrowRight2 />
                         <p>
-                            $1/km from<br />Springvale, VIC
+                            $1/km from<br />Noble Park, VIC
                         </p>
                     </div>
                 </div>

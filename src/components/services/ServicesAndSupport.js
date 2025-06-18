@@ -26,7 +26,7 @@ export default function ServicesSection() {
             alignItems: 'center',
             textAlign: 'left',
             justifyContent: 'center',
-            backgroundColor: 'background_light',
+            backgroundColor: '#FFFDFA',
             maxWidth: '75%',
             height: '100%',
             padding: '2rem',

@@ -23,7 +23,7 @@ export default function ContactSection() {
             alignItems: 'center',
             textAlign: 'left',
             justifyContent: 'center',
-            backgroundColor: 'background_light',
+            backgroundColor: '#FFFDFA',
             width: '55%',
             padding: '2rem',
             border: '1.25px solid',

@@ -8,12 +8,11 @@ export default function HeroSection() {
             display: 'flex',
             flexDirection: 'column',
             backgroundImage: 'url("/images/AutismBanner3.jpg")',
-            backgroundPosition: '75%',
+            backgroundPosition: '85%',
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
             boxShadow: '0.5px 0.5px 10px 0.5px rgba(0, 0, 0, 0.2)',
-            objectFit: 'fill',
-            width: '100%',
+            objectFit: 'contain',
             borderRadius: '15px',
             paddingTop: '2rem',
             zIndex: 1,
@@ -27,7 +26,7 @@ export default function HeroSection() {
                 height: '85vh'
             },
             '@media screen and (min-width: 1000px)': {
-                height: '80vh'
+                height: '80vh',
             }
         },
         button: {
@@ -38,14 +37,15 @@ export default function HeroSection() {
             width: '12rem',
             alignItems: 'center',
             marginTop: '2rem',
-            fontWeight: 'bold'
+            fontWeight: 'bold',
+
         },
         content: {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'flex-start',
             justifyContent: 'flex-start',
-            width: '100%',
+            width: '55%',
             padding: '3rem',
             wordWrap: 'break-word',
             '@media screen and (min-width: 550px)': {
@@ -64,7 +64,7 @@ export default function HeroSection() {
         },
         p: {
             marginTop: '1rem',
-            width: '60%'
+            width: '80%'
         },
     }
     return (
