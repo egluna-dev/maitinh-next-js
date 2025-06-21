@@ -29,7 +29,7 @@ export default function ServiceCard({ title, imageSrc, content, imgAlt }) {
             justifyContent: 'center',
             backgroundColor: 'background_light',
             boxShadow: '0px 0px 0px 1px #fff inset',
-            padding: '5rem',
+            padding: '2.5rem',
             wordWrap: 'break-word',
 
             '& h4': {

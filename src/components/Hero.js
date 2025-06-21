@@ -19,13 +19,13 @@ export default function HeroSection() {
             '@media screen and (minWidth: 550px)': {
                 height: '75vh'
             },
-            '@media screen and (min-width: 700px)': {
+            '@media screen and (minWidth: 700px)': {
                 height: '80vh'
             },
-            '@media screen and (min-width: 850px)': {
+            '@media screen and (minWidth: 850px)': {
                 height: '85vh'
             },
-            '@media screen and (min-width: 1000px)': {
+            '@media screen and (minWidth: 1000px)': {
                 height: '80vh',
             }
         },
@@ -48,16 +48,16 @@ export default function HeroSection() {
             width: '55%',
             padding: '3rem',
             wordWrap: 'break-word',
-            '@media screen and (min-width: 550px)': {
+            '@media screen and (minWidth: 550px)': {
                 padding: '3rem 5rem'
             },
-            '@media screen and (min-width: 700px)': {
+            '@media screen and (minWidth: 700px)': {
                 padding: '3rem 8rem'
             },
-            '@media screen and (min-width: 850px)': {
+            '@media screen and (minWidth: 850px)': {
                 padding: '5rem 10rem'
             },
-            '@media screen and (min-width: 1200px)': {
+            '@media screen and (minWidth: 1200px)': {
                 width: '70%',
                 padding: '5rem 10rem'
             }
