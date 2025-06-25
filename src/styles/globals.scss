@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:wght@200&family=Prata&family=Urbanist:wght@200&display=swap');
+@import url('https://use.typekit.net/fog2pfx.css');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet');
 
 * {
   box-sizing: border-box;
@@ -22,8 +23,9 @@ html {
 
 h1, h2, h3, h4, h5 {
   margin: 1rem 0 1.38rem;
-  font-family: 'Prata', serif;
+  font-family: "mencken-std", sans-serif;
   font-weight: 400;
+  font-style: normal;
   line-height: 1.3;
 }
 
@@ -50,8 +52,10 @@ a {
 p {
   font-family: 'Urbanist', sans-serif;
   font-size: 12px;
+  font-style: normal;
+  font-optical-sizing: auto;
   line-height: 1.6;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 0.8px;
   margin-bottom: 1rem;
 }

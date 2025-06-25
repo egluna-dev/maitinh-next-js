@@ -37,7 +37,7 @@ export default function AboutSection() {
             borderColor: '#707070',
             borderRadius: '15px',
             wordWrap: 'break-word',
-            '@media screen and (min-width: 825px)': {
+            '@media screen and (minWidth: 825px)': {
                 flexDirection: 'row',
                 alignItems: 'center'
             }
