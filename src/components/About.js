@@ -52,7 +52,7 @@ export default function AboutSection() {
             '& img': {
                 opacity: '0.9'
             },
-            '@media screen and (min-width: 700px)': {
+            '@media screen and (minWidth: 700px)': {
                 flexDirection: 'column',
                 alignItems: 'center'
             }
@@ -68,7 +68,7 @@ export default function AboutSection() {
         row1top: {
             marginLeft: '2rem',
             height: '100%',
-            '@media screen and (min-width: 700px)': {
+            '@media screen and (minWidth: 700px)': {
                 textAlign: 'center',
                 marginTop: '1rem'
             }
@@ -95,7 +95,7 @@ export default function AboutSection() {
             flexDirection: 'column',
             width: '80%',
             
-            '@media screen and (min-width: 825px)': {
+            '@media screen and (minWidth: 825px)': {
                 flexDirection: 'column',
                 textAlign: 'center',
                 marginTop: '1rem'

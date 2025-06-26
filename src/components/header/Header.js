@@ -13,7 +13,7 @@ export default function Header() {
             alignContent: 'space-between',
             justifyContent: 'space-around',
             width: '100%',
-            margin: '3rem auto',
+            margin: '2rem auto',
             '@media screen and (min-width: 1080px)': {
                 justifyContent: 'space-evenly',
                 width: '100%'
@@ -68,7 +68,7 @@ export default function Header() {
     return (
         <header style={styles.header} id="top">
             <Container sx={styles.container}>
-                <Logo src='/logos/Secondary_Color.svg' path="#!" height={80} width={80} alt='Mai Tinh Nguyen Logo' />
+                <Logo src='/logos/MaiTinhColor-01.svg' path="#!" height={175} width={175} alt='La Luna || Early Intervention Services Logo' />
                 <Flex as="nav" sx={styles.nav}>
                     {headerData.map((item, index) => (
                         <Link

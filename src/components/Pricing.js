@@ -35,7 +35,7 @@ export default function PricingSection() {
                 textAlign: 'center',
                 marginBottom: '1.5rem'
             },
-            '@media screen and (min-width: 720px)': {
+            '@media screen and (minWidth: 720px)': {
                 width: '70%'
             }
         },
@@ -49,7 +49,7 @@ export default function PricingSection() {
             opacity: '0.8',
             margin: '2rem auto',
             zIndex: '-1',
-            '@media only screen and (min-width: 550px)': {
+            '@media only screen and (minWidth: 550px)': {
                 maxWidth: '50vw'
             }
         },

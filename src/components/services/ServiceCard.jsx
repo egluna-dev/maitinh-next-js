@@ -17,7 +17,7 @@ export default function ServiceCard({ title, imageSrc, content, imgAlt }) {
             border: '1px solid black',
             margin: '1rem auto',
             borderRadius: '15px',
-            '@media screen and (min-width: 720px)': {
+            '@media screen and (minWidth: 720px)': {
                 margin: '1.5rem',
                 width: '70%',
             },

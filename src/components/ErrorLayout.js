@@ -18,7 +18,7 @@ export default function Layout({ title, keywords, description, children }) {
                 <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png" />
                 <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png" />
                 <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png" />
-                <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png" />
+                <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png" />
                 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
                 <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
                 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -26,6 +26,13 @@ export default function Layout({ title, keywords, description, children }) {
                 <meta name="msapplication-TileColor" content="#ffffff" />
                 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
                 <meta name="theme-color" content="#ffffff" />
+                <meta property="og:type" content="website"/>
+                <meta property="og:title" content="La Luna || Early Intervention Services"/>
+                <meta property="og:description" content={description}/>
+                <meta property="og:url" content="https://www.maitinhnguyen.com" />
+                <meta property="og:site_name" content="La Luna"/>
+                <meta name="theme-color" content="#ffffff" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
@@ -37,7 +44,7 @@ export default function Layout({ title, keywords, description, children }) {
 }
 
 Layout.defaultProps = {
-    title: 'Mai Tinh | Melbourne Early Childhood Intervention',
+    title: 'La Luna | Melbourne Early Intervention Services',
     description: 'Early childhood intervention for children with ASD, language delay, and intellectual disabilities',
     keywords: 'childhood, development, education, disabilities, autism, language delay, learning, children, Down Syndrome, intellectual disability'
 }

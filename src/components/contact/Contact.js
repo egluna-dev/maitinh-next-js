@@ -33,7 +33,7 @@ export default function ContactSection() {
                 textAlign: 'center',
                 marginBottom: '1.5rem'
             },
-            '@media screen and (min-width: 720px)': {
+            '@media screen and (minWidth: 720px)': {
                 width: '70%'
             }
         },

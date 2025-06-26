@@ -39,7 +39,7 @@ export default function ServicesSection() {
                 textAlign: 'center',
                 marginBottom: '1.5rem'
             },
-            '@media screen and (min-width: 720px)': {
+            '@media screen and (minWidth: 720px)': {
                 width: '70%'
             },
 
@@ -51,7 +51,7 @@ export default function ServicesSection() {
             justifyContent: 'center',
             height: '100%',
 
-            '@media screen and (min-width: 720px)': {
+            '@media screen and (minWidth: 720px)': {
                 flexDirection: 'row',
                 alignItems: 'center',
                 justifyContent: 'space-evenly',

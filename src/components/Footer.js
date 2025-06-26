@@ -32,7 +32,7 @@ const Footer = () => {
             alignContent: 'space-evenly',
             alignItems: 'center',
             width: '95%',
-            '@media screen and (min-width: 720px)': {
+            '@media screen and (minWidth: 720px)': {
                 flexDirection: 'row'
             }
         },
