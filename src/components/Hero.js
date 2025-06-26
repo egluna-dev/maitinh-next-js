@@ -47,6 +47,7 @@ export default function HeroSection() {
             justifyContent: 'flex-start',
             width: '55%',
             padding: '4rem',
+            margin: '0rem 10%',
             wordWrap: 'break-word',
             '@media screen and (minWidth: 550px)': {
                 padding: '3rem 5rem'
