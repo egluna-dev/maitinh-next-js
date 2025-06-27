@@ -3,7 +3,7 @@ import { Theme } from 'theme-ui';
 export const theme = {
     fonts: {
         body: 'Urbanist, sans-serif',
-        heading: 'Prata',
+        heading: 'mencken-std',
     },
     fontSizes: {
         pre: '0.75rem',

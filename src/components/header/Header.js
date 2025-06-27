@@ -20,8 +20,7 @@ export default function Header() {
             }
         },
         header: {
-            position: 'relative',
-            marginBottom: '-2rem',
+            position: 'sticky',
             width: '100%',
             bg: 'background_dark',
             fontWeight: 'bold',
@@ -34,7 +33,7 @@ export default function Header() {
             padding: '1.5rem 0',
             boxShadow: '0.5px 0.5px 10px 0.5px rgba(0, 0, 0, 0.2)',
             transition: 'all 200ms ease-in-out',
-            zIndex: 1,
+            zIndex: '1',
             '&:hover': {
                 bg: 'background_light'
             }
@@ -42,7 +41,7 @@ export default function Header() {
         nav: {
             display: 'none',
             flexDirection: 'row',
-            width: '45%',
+            width: '30%',
             fontFamily: 'body',
             fontSize: 'p',
             fontWeight: 'normal',

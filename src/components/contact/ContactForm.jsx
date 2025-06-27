@@ -1,5 +1,7 @@
 /** @jsxImportSource theme-ui */
-import { Container } from "theme-ui";
+/* eslint-disable react/no-unknown-property */
+
+import { Container, css } from "theme-ui";
 import FormInput from "./formInput";
 import { useRef } from "react";
 
@@ -13,7 +15,6 @@ export default function ContactForm({ handleSubmit }) {
             backgroundColor: 'background_light',
             boxShadow: '3px 3px 9px 2px rgba(2, 6, 4, 0.1)',
             border: '1px solid black',
-            marginTop: '-1.5rem',
             padding: '3.5rem 1rem 3rem 1rem',
             borderRadius: '15px',
             zIndex: '7'
@@ -22,28 +23,31 @@ export default function ContactForm({ handleSubmit }) {
             display: 'flex',
             flexDirection: 'column',
             padding: '0.5rem',
-            width: '95%',
+            width: '90%',
             zIndex: '3',
 
             '& input': {
                 padding: '0.5rem',
-                margin: '0.75rem 0',
+                margin: '0.5rem 0',
                 fontFamily: 'body',
-                fontWeight: 'bold',
-                border: '1px solid red',
+                fontWeight: 'normal',
+                border: '1px solid',
+                width: '80%',
                 backgroundColor: 'light_grey',
-                borderRadius: '5px',
+                borderRadius: '8px',
             },
             '& textarea': {
                 fontFamily: 'body',
                 padding: '0.5rem',
                 margin: '1rem 0',
-                backgroundColor: 'light_grey',
-                fontWeight: 'bold',
-                borderRadius: '5px'
+                fontWeight: 'normal',
+                borderRadius: '8px',
+                resize: 'vertical',
+                maxHeight: '250px',
+                minHeight: '100px',
             },
             '& button': {
-                backgroundColor: 'primary_dark',
+                backgroundColor: 'primary_light',
                 border: 'none',
                 borderRadius: '5px',
                 fontFamily: 'body',
@@ -55,16 +59,19 @@ export default function ContactForm({ handleSubmit }) {
                 transition: 'all 250ms ease-in-out',
                 cursor: 'pointer'
             },
-            '&button:hover': {
-                backgroundColor: 'primary_light',
-                cursor: 'pointer'
+            '&button::hover': {
+                backgroundColor: 'red',
+                cursor: 'pointer',
             }
         },
         formNames: {
             display: 'flex',
             flexDirection: 'row',
-            justifyContent: 'space-between',
+            justifyContent: 'space-evenly',
+            margin: '0.5rem 0',
+            width: '90%',
             '& input': {
+                fontFamily: 'Urbanist',
                 width: '90%',
             }
         }
@@ -80,9 +87,9 @@ export default function ContactForm({ handleSubmit }) {
 
     return (
         <Container sx={styles.container}>
-            <form action="" onSubmit={handleFormSubmit} style={styles.contactForm}>
+            <form action="" onSubmit={handleFormSubmit} sx={styles.contactForm}>
                 <p>* required field</p>
-                <div style={styles.formNames}>
+                <div sx={styles.formNames}>
                     <FormInput type="text" name="firstName" placeholder="First name *" required />
                     <FormInput type="text" name="lastName" placeholder="Last name" />
                 </div>

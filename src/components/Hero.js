@@ -15,7 +15,7 @@ export default function HeroSection() {
             objectFit: 'contain',
             borderRadius: '15px',
             paddingTop: '2rem',
-            zIndex: 1,
+            zIndex: '5',
             '@media screen and (minWidth: 550px)': {
                 height: '75vh'
             },

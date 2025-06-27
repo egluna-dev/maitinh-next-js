@@ -1,4 +1,4 @@
-import styles from '../styles/Countdown.module.scss'
+import styles from '../../public/stylesheets/Countdown.module.min.css'
 import { useState, useEffect } from 'react'
 import { getRemainingTimeToTimestamp } from '../utils/CountDownTimerUtils'
 
