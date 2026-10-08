@@ -67,7 +67,7 @@ export default function Header() {
     return (
         <header style={styles.header} id="top">
             <Container sx={styles.container}>
-                <Logo src='/logos/MaiTinhColor-01.svg' path="#!" height={175} width={175} alt='La Luna || Early Intervention Services Logo' />
+                <Logo src='/logos/LaLuna_Logo_Full.svg' path="#!" height={175} width={175} alt='La Luna Poo Poo|| Early Intervention Services Logo' />
                 <Flex as="nav" sx={styles.nav}>
                     {headerData.map((item, index) => (
                         <Link

@@ -70,7 +70,7 @@ const Footer = () => {
                         <a href="tel:0477555555" style={styles.footerLink}>Phone</a>
                         <a href="mailto:email@test.com" style={styles.footerLink}>Email</a>
                     </div>
-                    <Logo src='/logos/White_Full.svg' sx={styles.footerLink} path="#top" height={125} width={125} alt="Mai Tinh Nguyen" />
+                    <Logo src='/logos/LaLuna_Logo_Full_White.svg' sx={styles.footerLink} path="#top" height={125} width={125} alt="Mai Tinh Nguyen" />
                     <Logo src="/SVG/to_top.svg" sx={styles.footerLink} path="#top" height={75} width={75} alt="Back to Top" />
                 </main>
 
