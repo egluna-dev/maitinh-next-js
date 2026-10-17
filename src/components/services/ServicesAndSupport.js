@@ -1,7 +1,6 @@
 /** @jsxImportSource theme-ui */
 import { CloseIcon, Container } from "theme-ui";
 import ServiceCard from "./ServiceCard";
-import Image from "next/image";
 import servicesData from "./servicesData";
 
 export default function ServicesSection() {
@@ -45,12 +44,28 @@ export default function ServicesSection() {
 
         },
         cardContainer: {
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            height: '100%',
-
+            display: 'grid',
+            gridTemplateColumns: 'auto',
+            gridTemplateRows: 'auto',
+            gap: '1rem',
+            marginTop: 'auto',
+            width: '100%',
+            justifyContent: 'space-evenly',
+            alignItems: 'space-evenly',
+            alignContent: 'space-evenly',
+            textAlign: 'center',
+            '@media screen and (maxWidth: 720px)': {
+                gridTemplateColumns: 'auto auto',
+                gridTemplateRows: 'auto auto auto auto',
+                gap: '1rem',
+                marginTop: '2rem',
+                width: '100%',
+                justifyContent: 'space-evenly',
+                alignItems: 'space-evenly',
+                alignContent: 'space-evenly',
+                textAlign: 'center'
+            },
+ 
             '@media screen and (minWidth: 720px)': {
                 flexDirection: 'row',
                 alignItems: 'center',
@@ -71,7 +86,7 @@ export default function ServicesSection() {
                     Earum, totam optio incidunt molestias voluptas fugiat asperiores sit magni excepturi commodi ea eius.
                     Neque, explicabo maxime!
                     Exercitationem totam doloremque ad voluptatum sint harum animi placeat delectus atque quia
-                    ratione possimus dolores repellat repellendus quis nihil dicta, iste nam odio? Optio, dignissimos.
+                    ratione possimus dolores repellat repellendus quis nihil dicta, iste nam odio? Optio, dignissimos. Poo poo
                 </p>
             </div>
             <div style={styles.cardContainer}>

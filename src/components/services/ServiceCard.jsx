@@ -13,7 +13,7 @@ export default function ServiceCard({ title, imageSrc, content, imgAlt }) {
             boxShadow: '0px 0px 0px 1px #fff inset',
             width: '80%',
             height: '80%',
-            padding: '1rem',
+            padding: 'auto',
             border: '1px solid black',
             margin: '1rem auto',
             borderRadius: '15px',
@@ -28,30 +28,25 @@ export default function ServiceCard({ title, imageSrc, content, imgAlt }) {
             flexDirection: 'column',
             justifyContent: 'center',
             backgroundColor: 'background_light',
-            boxShadow: '0px 0px 0px 1px #fff inset',
-            padding: '2.5rem',
+            padding: '3.5rem',
             wordWrap: 'break-word',
-
-            '& h4': {
-                textAlign: 'left',
-                margin: '5rem 0'
-            }
+            paddingBottom: 'auto',
         },
         image: {
-            border: '1px solid black',
-            borderRadius: '5px',
-            margin: '1rem 0',
+            border: '1.5px solid black',
+            borderRadius: '0.5rem',
+            margin: '4rem auto',
             width: '100%',
             boxShadow: '0px 0px 0px 1px #fff inset',
             backgroundColor: 'transparent',
-            opacity: '0.65',
+            opacity: '0.7',
         }
     }
     return (
         <Container sx={styles.container}>
             <div style={styles.contentCard}>
                 <div style={styles.image}>
-                    <Image src={imageSrc} width={80} height={50} alt={imgAlt} loading="lazy" layout="responsive" sizes="(max-width: 768px), 100vw, 33vw"/>
+                    <Image src={imageSrc} width={300} height={200} alt={imgAlt} loading="lazy" layout="responsive" sizes="(max-width: 768px), 100vw, 33vw"/>
                 </div>
                 <h4 >{title}</h4>
                 <p>

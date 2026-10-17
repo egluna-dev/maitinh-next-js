@@ -40,14 +40,23 @@ export default function Header() {
         },
         nav: {
             display: 'none',
-            flexDirection: 'row',
-            width: '30%',
+            flexDirection: 'column',
+            width: '100%',
+            height: '100%',
+            justifyContent: 'space-evenly',
+            alignItems: 'center',
             fontFamily: 'body',
             fontSize: 'p',
             fontWeight: 'normal',
             color: 'text',
             '@media screen and (min-width: 906px)': {
-                display: 'flex'
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'space-evenly',
+                alignItems: 'center',
+                justifyContent: 'center',
+                width: '50%',
+                height: '50%',
             }
         },
         navLink: {
@@ -67,7 +76,7 @@ export default function Header() {
     return (
         <header style={styles.header} id="top">
             <Container sx={styles.container}>
-                <Logo src='/logos/LaLuna_Logo_Full.svg' path="#!" height={175} width={175} alt='La Luna Poo Poo|| Early Intervention Services Logo' />
+                <Logo src='/logos/LaLuna_Logo_Full.svg' path="#!" height={175} width={175} alt='La Luna || Early Intervention Services Logo' />
                 <Flex as="nav" sx={styles.nav}>
                     {headerData.map((item, index) => (
                         <Link
