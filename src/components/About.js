@@ -37,10 +37,6 @@ export default function AboutSection() {
             borderColor: '#707070',
             borderRadius: '15px',
             wordWrap: 'break-word',
-            '@media screen and (minWidth: 825px)': {
-                flexDirection: 'row',
-                alignItems: 'center'
-            }
         },
         row1: {
             position: 'relative',
@@ -49,13 +45,6 @@ export default function AboutSection() {
             width: '100%',
             justifyContent: 'space-evenly',
             alignItems: 'center',
-            '& img': {
-                opacity: '0.9'
-            },
-            '@media screen and (minWidth: 700px)': {
-                flexDirection: 'column',
-                alignItems: 'center'
-            }
         },
         row2: {
             position: 'relative',
@@ -66,7 +55,6 @@ export default function AboutSection() {
             alignItems: 'center'
         },
         row1top: {
-            marginLeft: '2rem',
             height: '100%',
             '@media screen and (minWidth: 700px)': {
                 textAlign: 'center',
@@ -104,54 +92,34 @@ export default function AboutSection() {
                 display: 'flex',
             }
         }
-
     }
     return (
         <Container sx={styles.container}>
             <div style={styles.content}>
                 <div style={styles.row1}>
-                    <Image style={styles.profile} src="/images/profilephoto.jpg" width={275} height={375} alt="Mai Tinh Nguyen" />
                     <div style={styles.row1top}>
-                        <h3>Mai Tinh Nguyen</h3>
-                        <h4>Early Intervention Specialist</h4>
+                        <h3>Meet Our Teacher</h3>
+                        <h4>Mai Tinh Nguyen</h4>
+                        <h5>Special Education & Early Intervention Teacher</h5>
                     </div>
-
                 </div>
                 <div style={styles.row3Right}>
                     <div style={styles.row2}>
                         <p style={styles.text}>
                             Hi, I am Mai Tinh and I specialize in the early intervention of children with Autism Spectrum Disorder (ASD), language delay, and intellectual disabilities such as Down Syndrome to help them develop into healthy and prosperous children.
-                            Hamburger ribeye sirloin tenderloin capicola chicken, chuck ham hock swine picanha. Corned beef meatball bresaola strip steak.
                         </p>
                     </div>
                     <div style={styles.row3}>
-                        <h3>
-                            About Myself
-                        </h3>
-                        <div style={styles.aboutPoint}>
-                            <ImArrowRight2 />
-                            <p>
-                                Bachelor of Special Education,
-                                Ho Chi Minh City School of Education 2010
-                            </p>
-                        </div>
-                        <div style={styles.aboutPoint}>
-                            <ImArrowRight2 />
-                            <p>
-                                Master&apos;s Degree,
-                                Inclusive and Special Education,
-                                Monash University, Melbourne 2017
-                            </p>
-                        </div>
-                        <div style={styles.aboutPoint}>
-                            <ImArrowRight2 xs={{ fontSize: '10px' }} />
-                            <p>
-                                Fluent in Vietnamese and English.
-                            </p>
-                        </div>
+                        <h4>
+                            Qualifications
+                        </h4>
+                        <ul>
+                            <li>Bachelor of Special Education</li>
+                            <li>Master of Inclusive and Special Education</li>
+                            <li>Graduate Diploma in Early Childhood Education</li>
+                        </ul>
                     </div>
-                </div>
-                
+                </div> 
             </div>
             <Logo src="/SVG/scroll_down.svg" sx={{ alignSelf: 'center', marginTop: '2rem' }} path="#top" height={20} width={20} alt="Back to Top" />
         </Container>

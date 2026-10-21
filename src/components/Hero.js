@@ -7,6 +7,7 @@ export default function HeroSection() {
         container: {
             display: 'flex',
             flexDirection: 'column',
+            color: 'text',
             backgroundImage: 'url("/images/AutismBanner3.jpg")',
             backgroundPosition: '85%',
             backgroundRepeat: 'no-repeat',
@@ -45,12 +46,14 @@ export default function HeroSection() {
             flexDirection: 'column',
             alignItems: 'flex-start',
             justifyContent: 'flex-start',
-            width: '55%',
+            width: '85%',
             padding: '4rem',
             margin: '0rem 10%',
             wordWrap: 'break-word',
             '@media screen and (minWidth: 550px)': {
-                padding: '3rem 5rem'
+                padding: '3rem 5rem',
+                backgroundColor: 'rgba(255, 255, 255, 0.7)',
+                color: 'text',
             },
             '@media screen and (minWidth: 700px)': {
                 padding: '3rem 8rem'
@@ -65,15 +68,34 @@ export default function HeroSection() {
         },
         p: {
             marginTop: '1rem',
-            width: '80%'
+            fontSize: '1.25rem',
+            backgroundColor: 'rgba(255, 255, 255, 0.7)',
+            padding: '1rem',
+            borderRadius: '10px',
+            color: 'text',
+            width: '100%',
+            height: 'auto',
+            '@media screen and (minWidth: 550px)': {
+                color: 'red',
+            }
         },
+        h2: {
+            backgroundColor: 'rgba(255, 255, 255, 0.7)',
+            padding: '1rem',
+            borderRadius: '10px',
+            width: '100%',
+            color: 'text',
+            'media screen and (minWidth: 550px)': {
+                color: 'red',
+            }
+        }
     }
     return (
         <Container sx={styles.container}>
             <div style={styles.content}>
                 <h1>Early Childhood Intervention</h1>
-                <h2>Language delay, ASD, and intellectual disabilities</h2>
-                <p style={styles.p}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium voluptatibus minus, earum voluptates dignissimos hic vitae impedit asperiores incidunt accusamus.</p>
+                <h2 style={styles.h2}>Language delay, ASD, and intellectual disabilities</h2>
+                <p style={styles.p}>La Luna Early Intervention Services provides individualised educational and developmental support for children aged 0–10 years with disabilities, developmental delays, and additional learning needs.</p>
                 <Button sx={styles.button} variant="secondary">Learn More <BiDownArrow /></Button>
             </div>
         </Container>

@@ -32,6 +32,7 @@ export default function Layout({ title, keywords, description, children }) {
         <meta name="theme-color" content="#ffffff" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon.ico" />
+        <link href="https://use.typekit.net/hmi7hqg.css" rel="stylesheet" />
       </Head>
       {children}
     </>
