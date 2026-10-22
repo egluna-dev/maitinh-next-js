@@ -12,12 +12,11 @@ export default function AboutSection() {
             flexDirection: 'column',
             alignItems: 'center',
             backgroundColor: 'background_light',
-            backgroundPosition: '75%',
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
             boxShadow: '0.5px 0.5px 10px 0.5px rgba(0, 0, 0, 0.2)',
             objectFit: 'fill',
-            width: '75%',
+            width: '95%',
             marginTop: '-2rem',
             padding: '3rem 1rem 3rem 1rem',
             borderRadius: '15px',
@@ -30,8 +29,8 @@ export default function AboutSection() {
             flexDirection: 'column',
             alignItems: 'space-evenly',
             justifyContent: 'flex-start',
-            height: '100%',
-            width: '95%',
+            height: '90%',
+            width: '100%',
             padding: '3rem',
             border: '1.5px solid',
             borderColor: '#707070',
@@ -81,7 +80,7 @@ export default function AboutSection() {
         row3Right: {
             display: 'flex',
             flexDirection: 'column',
-            width: '80%',
+            width: '100%',
             
             '@media screen and (minWidth: 825px)': {
                 flexDirection: 'column',
@@ -90,7 +89,22 @@ export default function AboutSection() {
             },
             row3: {
                 display: 'flex',
+                flexWrap: 'wrap',
             }
+        },
+        teacherName: {
+            fontWeight: 'bold',
+            fontSize: '1.75rem',
+            fontFamily: 'urbanist',
+        },
+
+        teacherTitle: {
+            fontSize: '1.25rem',
+            fontFamily: 'urbanist',
+            fontStyle: 'italic',
+        },
+        qualificationsList: {
+            fontFamily: 'urbanist',
         }
     }
     return (
@@ -99,21 +113,21 @@ export default function AboutSection() {
                 <div style={styles.row1}>
                     <div style={styles.row1top}>
                         <h3>Meet Our Teacher</h3>
-                        <h4>Mai Tinh Nguyen</h4>
-                        <h5>Special Education & Early Intervention Teacher</h5>
+                        <h4 style={styles.teacherName}>Mai Tinh Nguyen</h4>
+                        <h5 style={styles.teacherTitle}>Special Education & Early Intervention Teacher</h5>
                     </div>
                 </div>
                 <div style={styles.row3Right}>
                     <div style={styles.row2}>
                         <p style={styles.text}>
-                            Hi, I am Mai Tinh and I specialize in the early intervention of children with Autism Spectrum Disorder (ASD), language delay, and intellectual disabilities such as Down Syndrome to help them develop into healthy and prosperous children.
+                            Mai Tinh specialises in the early intervention of children with Autism Spectrum Disorder (ASD), language delay, and intellectual disabilities such as Down Syndrome to help them develop into healthy and prosperous children.
                         </p>
                     </div>
                     <div style={styles.row3}>
                         <h4>
                             Qualifications
                         </h4>
-                        <ul>
+                        <ul style={styles.qualificationsList}>
                             <li>Bachelor of Special Education</li>
                             <li>Master of Inclusive and Special Education</li>
                             <li>Graduate Diploma in Early Childhood Education</li>

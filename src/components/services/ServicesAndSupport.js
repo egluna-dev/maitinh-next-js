@@ -12,7 +12,6 @@ export default function ServicesSection() {
             alignItems: 'center',
             backgroundColor: 'background_dark',
             boxShadow: '0.5px 0.5px 10px 0.5px rgba(0, 0, 0, 0.2)',
-            padding: '2rem 0 3rem 0',
             borderRadius: '15px',
             marginTop: '-1rem',
             padding: '2rem 1rem 3rem 1rem',
@@ -26,7 +25,7 @@ export default function ServicesSection() {
             textAlign: 'left',
             justifyContent: 'center',
             backgroundColor: '#FFFDFA',
-            maxWidth: '75%',
+            width: '95%',
             height: '100%',
             padding: '2rem',
             margin: '2rem',
@@ -34,14 +33,6 @@ export default function ServicesSection() {
             borderColor: '#707070',
             borderRadius: '15px',
             wordWrap: 'break-word',
-            '& h3': {
-                textAlign: 'center',
-                marginBottom: '1.5rem'
-            },
-            '@media screen and (minWidth: 720px)': {
-                width: '70%'
-            },
-
         },
         cardContainer: {
             display: 'grid',
@@ -49,31 +40,10 @@ export default function ServicesSection() {
             gridTemplateRows: 'auto',
             gap: '1rem',
             marginTop: 'auto',
-            width: '100%',
             justifyContent: 'space-evenly',
             alignItems: 'space-evenly',
             alignContent: 'space-evenly',
             textAlign: 'center',
-            '@media screen and (maxWidth: 720px)': {
-                gridTemplateColumns: 'auto auto',
-                gridTemplateRows: 'auto auto auto auto',
-                gap: '1rem',
-                marginTop: '2rem',
-                width: '100%',
-                justifyContent: 'space-evenly',
-                alignItems: 'space-evenly',
-                alignContent: 'space-evenly',
-                textAlign: 'center'
-            },
- 
-            '@media screen and (minWidth: 720px)': {
-                flexDirection: 'row',
-                alignItems: 'center',
-                justifyContent: 'space-evenly',
-                alignItems: 'space-evenly',
-                margin: '2rem',
-                width: '93%',
-            }
         }
     }
 
@@ -82,11 +52,7 @@ export default function ServicesSection() {
             <div style={styles.contentCard}>
                 <h3>Services and Support</h3>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Earum, totam optio incidunt molestias voluptas fugiat asperiores sit magni excepturi commodi ea eius.
-                    Neque, explicabo maxime!
-                    Exercitationem totam doloremque ad voluptatum sint harum animi placeat delectus atque quia
-                    ratione possimus dolores repellat repellendus quis nihil dicta, iste nam odio? Optio, dignissimos. Poo poo
+                    At La Luna, we recognise that every child is unique, with their own strengths, abilities, and developmental needs. We provide individualised, child-centred intervention programs tailored to each child&apos;s developmental stage, learning abilities, and personal goals.
                 </p>
             </div>
             <div style={styles.cardContainer}>
