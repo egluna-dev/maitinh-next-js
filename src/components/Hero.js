@@ -46,25 +46,9 @@ export default function HeroSection() {
             flexDirection: 'column',
             alignItems: 'flex-start',
             justifyContent: 'flex-start',
+            margin: '0 auto 2rem auto',
             width: '85%',
-            padding: '4rem',
-            margin: '0rem 10%',
             wordWrap: 'break-word',
-            '@media screen and (minWidth: 550px)': {
-                padding: '3rem 5rem',
-                backgroundColor: 'rgba(255, 255, 255, 0.7)',
-                color: 'text',
-            },
-            '@media screen and (minWidth: 700px)': {
-                padding: '3rem 8rem'
-            },
-            '@media screen and (minWidth: 850px)': {
-                padding: '5rem 10rem'
-            },
-            '@media screen and (minWidth: 1200px)': {
-                width: '70%',
-                padding: '5rem 10rem'
-            }
         },
         p: {
             marginTop: '1rem',

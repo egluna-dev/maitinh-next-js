@@ -24,7 +24,7 @@ export default function ContactSection() {
             textAlign: 'left',
             justifyContent: 'center',
             backgroundColor: '#FFFDFA',
-            width: '55%',
+            width: '100%',
             padding: '2rem',
             border: '1.25px solid',
             borderRadius: '15px',
@@ -38,8 +38,8 @@ export default function ContactSection() {
             }
         },
         formContainer: {
-            margin: '3rem 0',
-            width: '55%',
+            margin: '2rem 0',
+            width: '100%',
         }
     }
 
@@ -54,12 +54,10 @@ export default function ContactSection() {
             <div style={styles.contentCard}>
                 <h3>Contact</h3>
                 <p>
-                    Lorem poo ipsum dolor sit amet, consectetur adipisicing elit.
-                    Earum, totam optio incidunt molestias voluptas fugiat asperiores sit magni excepturi commodi ea eius.
-                    Neque, explicabo maxime!
-                    Exercitationem totam doloremque ad voluptatum sint harum animi placeat delectus atque quia
-                    ratione possimus dolores repellat repellendus quis nihil dicta, iste nam odio? Optio, dignissimos.
+                    At La Luna, we believe every child has the potential to learn, grow, and thrive when provided with the right support, understanding, and opportunities.
                 </p>
+                <p>Our goal is to work closely with children and their families to build essential communication, learning, social, and independence skills, empowering each child to develop confidence and achieve their individual goals.</p>
+                <p>📩 Contact La Luna today to discuss how our individualised intervention programs can support your child&apos;s learning and development.</p>
             </div>
             <div style={styles.formContainer}>
                 <ContactForm handleSubmit={handleFormSubmit}/>

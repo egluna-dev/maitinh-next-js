@@ -23,7 +23,7 @@ export default function ContactForm({ handleSubmit }) {
             display: 'flex',
             flexDirection: 'column',
             padding: '0.5rem',
-            width: '90%',
+            width: '100%',
             zIndex: '3',
 
             '& input': {
