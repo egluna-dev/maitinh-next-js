@@ -26,7 +26,7 @@ export default function PricingSection() {
             justifyContent: 'center',
             backgroundColor: '#FFF7E8',
             boxShadow: '0px 0px 0px 1px #fff inset',
-            width: '70%',
+            width: '100%',
             padding: '2rem',
             border: '1.25px solid',
             borderRadius: '15px',
@@ -35,9 +35,6 @@ export default function PricingSection() {
                 textAlign: 'center',
                 marginBottom: '1.5rem'
             },
-            '@media screen and (minWidth: 720px)': {
-                width: '70%'
-            }
         },
         imageContainer: {
             display: 'flex',
@@ -45,7 +42,7 @@ export default function PricingSection() {
             backgroundColor: 'white',
             border: '1px solid black',
             borderRadius: '5px',
-            width: '65%',
+            width: '100%',
             opacity: '0.8',
             margin: '2rem auto',
             zIndex: '-1',
@@ -77,13 +74,12 @@ export default function PricingSection() {
         <Container sx={styles.container}>
             <div style={styles.contentCard}>
                 <h3>Location and Pricing</h3>
+                <h5>Centre-Based Sessions – Noble Park, Melbourne</h5>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Earum, totam optio incidunt molestias voluptas fugiat asperiores sit magni excepturi commodi ea eius.
-                    Neque, explicabo maxime!
-                    Exercitationem totam doloremque ad voluptatum sint harum animi placeat delectus atque quia
-                    ratione possimus dolores repellat repellendus quis nihil dicta, iste nam odio? Optio, dignissimos.
+                    Families are welcome to bring their children to our intervention location in Noble Park, VIC for individualised learning and developmental support sessions.
                 </p>
+                <h5>Home-Based Intervention</h5>
+                <p>We also offer home visits across Melbourne&apos;s south-eastern suburbs, generally within a 30-minute driving distance from Noble Park.</p>
             </div>
             <div style={styles.imageContainer}>
                 <Image src="/images/ChildrenLearning.jpg" height={2} width={3} alt="Children learning" loading="lazy" layout="responsive" sizes="(max-width: 500px), 50vw, 20vw" style={{borderRadius: "5px"}}/>
@@ -91,24 +87,17 @@ export default function PricingSection() {
             <div style={styles.contentCard} >
                 <h3>Pricing Structure</h3>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur,
-                    adipisicing elit. Possimus eligendi provident quae at aliquid est,
-                    modi dolore placeat impedit ipsa fugit, perspiciatis et!
-                    Nobis qui laboriosam numquam temporibus explicabo voluptate natus esse at tempora magnam,
-                    reprehenderit cum unde ipsam quam eveniet quasi, rerum,
-                    voluptatibus praesentium dolorum quod porro excepturi. Eos.
+                    Our intervention services are offered at a competitive hourly rate, with additional travel fees for home visits. We are committed to providing high-quality support and personalised care for each child and family we work with.
                 </p>
                 <div style={styles.rates}>
                     <h4>Hourly rate</h4>
                     <div style={styles.aboutPoint}>
-                        <ImArrowRight2 />
                         <p>
                             $150 / hour
                         </p>
                     </div>
                     <h4>Traveling Fee</h4>
                     <div style={styles.aboutPoint}>
-                        <ImArrowRight2 />
                         <p>
                             $1/km from<br />Noble Park, VIC
                         </p>

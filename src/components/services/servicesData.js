@@ -2,7 +2,7 @@ const servicesData = [
     {
         title: 'Autism Spectrum Disorder (ASD)',
         imageSrc: '/images/AutismAwareness.jpg',
-        content: 'Maecenas convallis, ex ac pulvinar pharetra, tellus eros pulvinar sem, nec lobortis dui diam vitae ipsum. Aenean nulla orci, sollicitudin at enim vel, accumsan hendrerit purus. Suspendisse potenti.',
+        content: 'ASD is a developmental disorder that affects communication, behaviour, and social interaction. Our intervention programs are designed to support children with ASD in developing essential skills, improving communication, and enhancing social interactions through evidence-based strategies and individualized support.',
         imgAlt: 'Autism Spectrum Disorder'
     },
     {

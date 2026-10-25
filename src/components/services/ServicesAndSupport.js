@@ -38,23 +38,22 @@ export default function ServicesSection() {
             display: 'grid',
             gridTemplateColumns: 'auto',
             gridTemplateRows: 'auto',
-            gap: '1rem',
-            marginTop: 'auto',
             justifyContent: 'space-evenly',
             alignItems: 'space-evenly',
             alignContent: 'space-evenly',
             textAlign: 'center',
-        }
+        },
     }
 
     return (
         <Container sx={styles.container} >
             <div style={styles.contentCard}>
-                <h3>Services and Support</h3>
+                <h3>Our Intervention Programs</h3>
                 <p>
                     At La Luna, we recognise that every child is unique, with their own strengths, abilities, and developmental needs. We provide individualised, child-centred intervention programs tailored to each child&apos;s developmental stage, learning abilities, and personal goals.
                 </p>
                 <p>Our services primarily focus on one-on-one (1:1) intervention sessions, allowing each child to learn at their own pace in a positive, encouraging, and supportive environment.</p>
+                <p>We welcome children with or without NDIS funding, including children experiencing:</p>
             </div>
             <div style={styles.cardContainer}>
                 {servicesData.map((item, index) => (

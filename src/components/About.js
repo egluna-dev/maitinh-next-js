@@ -133,6 +133,16 @@ export default function AboutSection() {
                             <li>Graduate Diploma in Early Childhood Education</li>
                         </ul>
                     </div>
+                    <div style={styles.row3}>
+                        <h4>
+                            Professional Experience
+                        </h4>
+                        <ul style={styles.qualificationsList}>
+                            <li>Over 10 years of experience working in special education and early intervention, supporting children with disabilities and additional learning needs.</li>
+                            <li>Extensive experience supporting children with diverse developmental profiles, learning abilities, and individual support requirements.</li>
+                            <li>Languages spoken: English and Vietnamese</li>
+                        </ul>
+                    </div>
                 </div> 
             </div>
             <Logo src="/SVG/scroll_down.svg" sx={{ alignSelf: 'center', marginTop: '2rem' }} path="#top" height={20} width={20} alt="Back to Top" />
