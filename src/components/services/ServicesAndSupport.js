@@ -25,7 +25,7 @@ export default function ServicesSection() {
             textAlign: 'left',
             justifyContent: 'center',
             backgroundColor: '#FFFDFA',
-            width: '95%',
+            width: '100%',
             height: '100%',
             padding: '2rem',
             margin: '2rem',
@@ -54,6 +54,7 @@ export default function ServicesSection() {
                 <p>
                     At La Luna, we recognise that every child is unique, with their own strengths, abilities, and developmental needs. We provide individualised, child-centred intervention programs tailored to each child&apos;s developmental stage, learning abilities, and personal goals.
                 </p>
+                <p>Our services primarily focus on one-on-one (1:1) intervention sessions, allowing each child to learn at their own pace in a positive, encouraging, and supportive environment.</p>
             </div>
             <div style={styles.cardContainer}>
                 {servicesData.map((item, index) => (

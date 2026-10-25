@@ -12,8 +12,7 @@ export default function ServiceCard({ title, imageSrc, content, imgAlt }) {
             backgroundColor: 'background_light',
             boxShadow: '0px 0px 0px 1px #fff inset',
             width: '100%',
-            height: '100%',
-            padding: 'auto',
+            height: 'auto',
             border: '1px solid black',
             margin: '1rem auto',
             borderRadius: '15px',
@@ -31,10 +30,8 @@ export default function ServiceCard({ title, imageSrc, content, imgAlt }) {
         image: {
             border: '1.5px solid black',
             borderRadius: '0.5rem',
-            margin: '4rem auto',
-            width: '100%',
             boxShadow: '0px 0px 0px 1px #fff inset',
-            backgroundColor: 'transparent',
+            marginBottom: '1rem',
             opacity: '0.7',
         }
     }
