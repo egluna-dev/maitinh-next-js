@@ -1,3 +1,4 @@
+import { Theme } from 'theme-ui'
 
 export const theme = {
     fonts: {

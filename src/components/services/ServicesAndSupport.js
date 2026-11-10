@@ -50,9 +50,13 @@ export default function ServicesSection() {
             <div style={styles.contentCard}>
                 <h3>Our Intervention Programs</h3>
                 <p>
-                    At La Luna, we recognise that every child is unique, with their own strengths, abilities, and developmental needs. We provide individualised, child-centred intervention programs tailored to each child&apos;s developmental stage, learning abilities, and personal goals.
+                    At La Luna, we recognise that every child is unique, with their own strengths, abilities, and developmental needs. We provide individualised intervention programs tailored to each child&apos;s developmental stage, learning abilities, and personal goals.
                 </p>
                 <p>Our services primarily focus on one-on-one (1:1) intervention sessions, allowing each child to learn at their own pace in a positive, encouraging, and supportive environment.</p>
+                {/* <p>
+                    At La Luna, we believe every child has the potential to learn, grow, and thrive when provided with the right support, understanding, and opportunities.
+                </p> */}
+                <p>Our goal is to work closely with children and their families to build essential communication, learning, social, and independence skills, empowering each child to develop confidence and achieve their individual goals.</p>
                 <p>We welcome children with or without NDIS funding, including children experiencing:</p>
             </div>
             <div style={styles.cardContainer}>

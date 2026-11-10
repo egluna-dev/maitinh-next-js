@@ -2,6 +2,7 @@
 /* eslint-disable react/no-unknown-property */
 
 import { Container, css } from "theme-ui";
+import { Button } from "theme-ui";
 import FormInput from "./formInput";
 import { useRef } from "react";
 
@@ -96,7 +97,7 @@ export default function ContactForm({ handleSubmit }) {
                 <FormInput type="email" name="email" placeholder="Email *" required />
                 <FormInput type="text" name="subject" placeholder="Subject *" required />
                 <textarea name="message" id="contact-form" placeholder="Message *" cols="30" rows="10" maxLength="200" required></textarea>
-                <button>Send</button>
+                <Button mr={2} type="submit">Submit</Button>
             </form>
         </Container>
     )

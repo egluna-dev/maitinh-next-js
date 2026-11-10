@@ -80,11 +80,12 @@ export default function PricingSection() {
                 </p>
                 <h5>Home-Based Intervention</h5>
                 <p>We also offer home visits across Melbourne&apos;s south-eastern suburbs, generally within a 30-minute driving distance from Noble Park.</p>
+                <p>Please contact us using the form below to inquire about our services and pricing.</p>
             </div>
             <div style={styles.imageContainer}>
                 <Image src="/images/ChildrenLearning.jpg" height={2} width={3} alt="Children learning" loading="lazy" layout="responsive" sizes="(max-width: 500px), 50vw, 20vw" style={{borderRadius: "5px"}}/>
             </div>
-            <div style={styles.contentCard} >
+            {/* <div style={styles.contentCard} >
                 <h3>Pricing Structure</h3>
                 <p>
                     Our intervention services are offered at a competitive hourly rate, with additional travel fees for home visits. We are committed to providing high-quality support and personalised care for each child and family we work with.
@@ -103,7 +104,7 @@ export default function PricingSection() {
                         </p>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </Container>
     )
 }

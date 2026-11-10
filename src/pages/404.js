@@ -8,7 +8,7 @@ export default function NotFoundPage() {
   return (
     <ErrorLayout>
         <div className={styles.container}>
-          <Image src='/logos/MaiTinhColor-01.png' width={200} height={170} alt='Mai Tinh Logo'/>
+          <Image src='/logos/LaLuna_Logo_Full.svg' width={200} height={170} alt='LaLuna Early Intervention Services Logo'/>
           <h2>Whoops! 🤷‍♀️</h2>
 
           <h4 style={{fontFamily: 'body'}}>This page does not exist.</h4>

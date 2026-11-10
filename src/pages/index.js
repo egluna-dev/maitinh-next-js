@@ -12,8 +12,8 @@ export default function Home() {
     <Layout>
       <Header />
       <HeroSection />
-      <AboutSection />
       <ServicesAndSupport />
+      <AboutSection />
       <PricingSection />
       <ContactSection />
       <Footer />

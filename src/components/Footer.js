@@ -47,10 +47,9 @@ const Footer = () => {
             justifyContent: 'center',
             alignItems: 'center',
             width: '100%',
-            minHeight: '14vh',
-            bg: 'text',
+            minHeight: '8vh',
             zIndex: '-8',
-            paddingTop: '1.5rem',
+            paddingTop: '2rem',
             color: 'background_light'
         },
         footerLink: {
