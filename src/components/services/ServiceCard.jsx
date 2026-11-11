@@ -18,10 +18,11 @@ export default function ServiceCard({ title, imageSrc, content, imgAlt }) {
             borderRadius: '15px',
         },
         contentCard: {
-            position: 'relative',
+            // position: 'relative',
             display: 'flex',
             flexDirection: 'column',
-            justifyContent: 'center',
+            justifyContent: 'space-evenly',
+            alignItems: 'space-evenly',
             backgroundColor: 'background_light',
             padding: '3.5rem',
             wordWrap: 'break-word',

@@ -1,5 +1,5 @@
 /** @jsxImportSource theme-ui */
-import { CloseIcon, Container } from "theme-ui";
+import { Box, Container } from "theme-ui";
 import ServiceCard from "./ServiceCard";
 import servicesData from "./servicesData";
 
@@ -26,7 +26,7 @@ export default function ServicesSection() {
             justifyContent: 'center',
             backgroundColor: '#FFFDFA',
             width: '100%',
-            height: '100%',
+            maxHeight: '80%',
             padding: '2rem',
             margin: '2rem',
             border: '1.5px solid',
@@ -35,19 +35,19 @@ export default function ServicesSection() {
             wordWrap: 'break-word',
         },
         cardContainer: {
-            display: 'grid',
-            gridTemplateColumns: 'auto',
-            gridTemplateRows: 'auto',
-            justifyContent: 'space-evenly',
-            alignItems: 'space-evenly',
-            alignContent: 'space-evenly',
-            textAlign: 'center',
-        },
+        display: 'grid',
+        // Mobile: 1 column. Desktop (768px+): 2 columns.
+        gridTemplateColumns: ['1fr', 'repeat(2, 1fr)', 'repeat(3, 1fr)'],
+        gap: '2rem', // Replaces margins on the cards
+        justifyContent: 'center',
+        alignItems: 'stretch', // Forces both cards to be the exact same height
+        textAlign: 'center',
+    },
     }
 
     return (
         <Container sx={styles.container} >
-            <div style={styles.contentCard}>
+            <Box sx={styles.contentCard}>
                 <h3>Our Intervention Programs</h3>
                 <p>
                     At La Luna, we recognise that every child is unique, with their own strengths, abilities, and developmental needs. We provide individualised intervention programs tailored to each child&apos;s developmental stage, learning abilities, and personal goals.
@@ -58,8 +58,8 @@ export default function ServicesSection() {
                 </p> */}
                 <p>Our goal is to work closely with children and their families to build essential communication, learning, social, and independence skills, empowering each child to develop confidence and achieve their individual goals.</p>
                 <p>We welcome children with or without NDIS funding, including children experiencing:</p>
-            </div>
-            <div style={styles.cardContainer}>
+            </Box>
+            <Box sx={styles.cardContainer}>
                 {servicesData.map((item, index) => (
                     <ServiceCard
                         key={index}
@@ -69,7 +69,7 @@ export default function ServicesSection() {
                         imgAlt={item.imgAlt}
                     />
                 ))}
-            </div>
+            </Box>
         </Container >
     )
 }

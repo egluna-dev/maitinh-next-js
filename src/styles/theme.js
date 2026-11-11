@@ -64,5 +64,6 @@ export const theme = {
 
             }
         }
-    }
+    },
+    breakpoints: ['600px', '900px', '1024px', '1440px'],
 }
