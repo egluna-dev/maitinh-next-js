@@ -4,7 +4,7 @@
 import { Container, css } from "theme-ui";
 import { Button, Box } from "theme-ui";
 import FormInput from "./formInput";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 
 export default function ContactForm() {
@@ -79,16 +79,38 @@ export default function ContactForm() {
         }
     }
 
-    const firstNameRef = useRef();
+    const [status, setStatus] = useState("")
 
-    const [state, handleSubmit] = useForm("xknqvayl")
-    if (state.succeeded) {
-        return <p>Thank you for your enquiry!</p>
-    }    
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setStatus("Submitting...");
+    }
+
+    const form = e.target
+    const data = new FormData(form)
+
+    try {
+        const response = fetch("https://formspree.io/f/mljbgpvr", {
+            method:"POST",
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+
+        if (response.ok) {
+            setStatus("Message sent successfully!")
+            form.reset()
+        } else {
+            setStatus("Error sending message. Please try again later.")
+        }
+    } catch (error) {
+        setStatus("Error sending message. Please try again later.")
+    }
 
     return (
         <Container sx={styles.container}>
-            <Box as="form" action="https://formspree.io/f/mljbgpvr" method="POST" onSubmit={handleSubmit} sx={styles.contactForm}>
+            <Box as="form" onSubmit={handleSubmit} sx={styles.contactForm}>
                 <p>* required field</p>
                 <Box sx={styles.formNames}>
                     <FormInput type="text" name="firstName" placeholder="First name *" required />
@@ -97,7 +119,7 @@ export default function ContactForm() {
                 <FormInput type="email" name="email" placeholder="Email *" required />
                 <FormInput type="text" name="subject" placeholder="Subject *" required />
                 <textarea name="message" id="contact-form" placeholder="Message *" cols="30" rows="10" maxLength="200" required></textarea>
-                <Button mr={2} type="submit">Submit</Button>
+                <Box as="button" mr={2} type="submit" disabled={status === "Submitting..."}>Submit</Box>
             </Box>
         </Container>
     )
