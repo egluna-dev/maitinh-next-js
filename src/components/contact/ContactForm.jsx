@@ -2,11 +2,12 @@
 /* eslint-disable react/no-unknown-property */
 
 import { Container, css } from "theme-ui";
-import { Button } from "theme-ui";
+import { Button, Box } from "theme-ui";
 import FormInput from "./formInput";
 import { useRef } from "react";
+import { useForm, ValidationError } from "@formspree/react";
 
-export default function ContactForm({ handleSubmit }) {
+export default function ContactForm() {
     const styles = {
         container: {
             position: 'relative',
@@ -80,25 +81,24 @@ export default function ContactForm({ handleSubmit }) {
 
     const firstNameRef = useRef();
 
-    const handleFormSubmit = (e) => {
-        e.preventDefault();
-        const data = new FormData(e.target);
-        console.log(data.entries);
-    }
+    const [state, handleSubmit] = useForm("xknqvayl")
+    if (state.succeeded) {
+        return <p>Thank you for your enquiry!</p>
+    }    
 
     return (
         <Container sx={styles.container}>
-            <form action="" onSubmit={handleFormSubmit} sx={styles.contactForm}>
+            <Box as="form" action="https://formspree.io/f/mljbgpvr" method="POST" onSubmit={handleSubmit} sx={styles.contactForm}>
                 <p>* required field</p>
-                <div sx={styles.formNames}>
+                <Box sx={styles.formNames}>
                     <FormInput type="text" name="firstName" placeholder="First name *" required />
                     <FormInput type="text" name="lastName" placeholder="Last name" />
-                </div>
+                </Box>
                 <FormInput type="email" name="email" placeholder="Email *" required />
                 <FormInput type="text" name="subject" placeholder="Subject *" required />
                 <textarea name="message" id="contact-form" placeholder="Message *" cols="30" rows="10" maxLength="200" required></textarea>
                 <Button mr={2} type="submit">Submit</Button>
-            </form>
+            </Box>
         </Container>
     )
 }
