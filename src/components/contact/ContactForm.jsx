@@ -84,29 +84,31 @@ export default function ContactForm() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setStatus("Submitting...");
-    }
 
-    const form = e.target
-    const data = new FormData(form)
+        const form = e.target
+        const data = new FormData(form)
 
-    try {
-        const response = fetch("https://formspree.io/f/mljbgpvr", {
-            method:"POST",
-            body: data,
-            headers: {
-                'Accept': 'application/json'
+        try {
+            const response = fetch("https://formspree.io/f/mljbgpvr", {
+                method:"POST",
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+
+            if (response.ok) {
+                setStatus("Message sent successfully!")
+                form.reset()
+            } else {
+                setStatus("Error sending message. Please try again later.")
             }
-        })
-
-        if (response.ok) {
-            setStatus("Message sent successfully!")
-            form.reset()
-        } else {
+        } catch (error) {
             setStatus("Error sending message. Please try again later.")
         }
-    } catch (error) {
-        setStatus("Error sending message. Please try again later.")
     }
+
+    
 
     return (
         <Container sx={styles.container}>
