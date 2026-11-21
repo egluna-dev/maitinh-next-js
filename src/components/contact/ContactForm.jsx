@@ -102,11 +102,11 @@ export default function ContactForm() {
     }
 
     const [state, handleSubmit] = useForm('mljbgpvr')
-    const [showPopup, setShowPopup] = useState(false)
+    const [popup, setPopup] = useState(false)
 
     useEffect (() => {
         if (state.succeeded) {
-            setShowPopup({
+            setPopup({
                 type: "success",
                 message: "Your email has been sent successfully! We will reply as soon as possible."
             })
@@ -115,7 +115,7 @@ export default function ContactForm() {
 
     useEffect(() => {
         if (state.errors) {
-            setShowPopup({
+            setPopup({
                 type: "error",
                 message: getFormSpreeErrorMessage(state.errors)
             })
