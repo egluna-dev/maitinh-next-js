@@ -3,6 +3,7 @@ import ErrorLayout from "../components/ErrorLayout";
 import Link from 'next/link';
 import Image from "next/image";
 import styles from '../styles/404.module.scss';
+import { Heading } from "theme-ui";
 
 export default function NotFoundPage() {
   return (
@@ -11,7 +12,7 @@ export default function NotFoundPage() {
           <Image src='/logos/LaLuna_Logo_Full_Production.svg' width={200} height={170} alt='LaLuna Early Intervention Services Logo'/>
           <h2>Whoops! 🤷‍♀️</h2>
 
-          <h4 style={{fontFamily: 'body'}}>This page does not exist.</h4>
+          <Heading as="h4" sx={{fontFamily: 'body'}}>This page does not exist.</Heading>
 
           <Link href='/' passHref><a className={styles.link}>Back Home</a></Link>
         </div> 
