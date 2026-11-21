@@ -2,9 +2,9 @@
 /* eslint-disable react/no-unknown-property */
 
 import { Container, css } from "theme-ui";
-import { Button, Box } from "theme-ui";
+import { Box, Text } from "theme-ui";
 import FormInput from "./formInput";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 
 export default function ContactForm() {
@@ -48,19 +48,6 @@ export default function ContactForm() {
                 maxHeight: '250px',
                 minHeight: '100px',
             },
-            '& button': {
-                backgroundColor: 'primary_light',
-                border: 'none',
-                borderRadius: '5px',
-                fontFamily: 'body',
-                fontWeight: 'bold',
-                height: '30px',
-                width: '30%',
-                margin: '0.5rem 0',
-                padding: '0.25rem 0.75rem',
-                transition: 'all 250ms ease-in-out',
-                cursor: 'pointer'
-            },
             '&button::hover': {
                 backgroundColor: 'red',
                 cursor: 'pointer',
@@ -76,53 +63,72 @@ export default function ContactForm() {
                 fontFamily: 'Urbanist',
                 width: '90%',
             }
+        },
+        submitButton: {
+            backgroundColor: 'primary_light',
+            border: 'none',
+            borderRadius: '5px',
+            fontFamily: 'body',
+            height: '30px',
+            width: '30%',
+            margin: '0.5rem 0',
+            padding: '0.25rem 0.75rem',
+            transition: 'all 250ms ease-in-out',
+            cursor: 'pointer'
         }
     }
 
     const [status, setStatus] = useState("")
+    const [state, handleSubmit] = useForm('mljbgpvr')
+    const [showPopup, setShowPopup] = useState(false)
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setStatus("Submitting...");
-
-        const form = e.target
-        const data = new FormData(form)
-
-        try {
-            const response = fetch("https://formspree.io/f/mljbgpvr", {
-                method:"POST",
-                body: data,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-
-            if (response.ok) {
-                setStatus("Message sent successfully!")
-                form.reset()
-            } else {
-                setStatus("Error sending message. Please try again later.")
-            }
-        } catch (error) {
-            setStatus("Error sending message. Please try again later.")
+    useEffect (() => {
+        if (state.succeeded) {
+            setShowPopup(true)
         }
-    }
+    }, [state.succeeded])
 
-    
+    const handleFormSubmit = async (e) => {
+        await handleSubmit(e)
+    }
 
     return (
         <Container sx={styles.container}>
-            <Box as="form" onSubmit={handleSubmit} sx={styles.contactForm}>
+            <Box as="form" onSubmit={handleFormSubmit} sx={styles.contactForm}>
                 <p>* required field</p>
                 <Box sx={styles.formNames}>
                     <FormInput type="text" name="firstName" placeholder="First name *" required />
                     <FormInput type="text" name="lastName" placeholder="Last name" />
                 </Box>
                 <FormInput type="email" name="email" placeholder="Email *" required />
+                <ValidationError prefix="Email" field="email" errors={state.errors} />
                 <FormInput type="text" name="subject" placeholder="Subject *" required />
-                <textarea name="message" id="contact-form" placeholder="Message *" cols="30" rows="10" maxLength="200" required></textarea>
-                <Box as="button" mr={2} type="submit" disabled={status === "Submitting..."}>Submit</Box>
+                <Box as="textarea" name="message" id="contact-form" placeholder="Message *" cols="30" rows="10" maxLength="200" required></Box>
+                <ValidationError prefix="Message" field="message" errors={state.errors} />
+                <Box as="button" mr={2} type="submit" disabled={state.submitting} sx={styles.submitButton}>
+                    {state.submitting ? 'Sending...' : 'Submit'}
+                </Box>
+
+                {state.errors && state.errors.length > 0 && (
+                    <Box sx={styles.errorBanner} >
+                        <Text >
+                            There was a problem sending your message. Please check your details and try again.
+                        </Text>
+                    </Box>
+                )}
             </Box>
+            {showPopup && (
+                <Box sx={styles.modalBackdrop} role="dialog" aria-modal="true">
+                    <Box sx={styles.modalCard}>
+                        <Text sx={styles.modalText}>
+                            Your email has been sent successfully! We will reply as soon as possible.
+                        </Text>
+                        <Box as="button" type="button" onClick={() => setShowPopup(false)} sx={styles.closeBtn}>
+                            Close
+                        </Box>
+                    </Box>
+                </Box>
+            )}
         </Container>
     )
 }
