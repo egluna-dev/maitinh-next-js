@@ -25,10 +25,10 @@ export default function Layout({ title, keywords, description, children }) {
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta name="theme-color" content="#ffffff" />
         <meta property="og:type" content="website"/>
-        <meta property="og:title" content="La Luna || Early Intervention Services"/>
+        <meta property="og:title" content="La Luna Early Intervention Services"/>
         <meta property="og:description" content={description}/>
-        <meta property="og:url" content="https://www.maitinhnguyen.com" />
-        <meta property="og:site_name" content="La Luna"/>
+        <meta property="og:url" content="https://lalunaecis.com.au" />
+        <meta property="og:site_name" content="La Luna ECIS"/>
         <meta name="theme-color" content="#ffffff" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon.ico" />
@@ -41,6 +41,6 @@ export default function Layout({ title, keywords, description, children }) {
 Layout.defaultProps = {
   title: 'La Luna Early Intervention Services',
   description: 'Early childhood intervention for children with ASD, language delay, and intellectual disabilities',
-  keywords: 'childhood, development, education, disabilities, autism, language delay, learning, children, Down Syndrome, intellectual disability'
+  keywords: 'childhood, development, education, disabilities, autism, language delay, learning, children, Down Syndrome, intellectual disability, neurodivergence, early education, behavioural therapy'
 }
 
