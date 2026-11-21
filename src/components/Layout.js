@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-isComingSoon = process.env.NEXT_PUBLIC_COMING_SOON === "true"
+const isComingSoon = process.env.NEXT_PUBLIC_COMING_SOON === "true"
 
 export default function Layout({ title, keywords, description, children }) {
   return (
