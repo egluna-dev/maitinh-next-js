@@ -1,5 +1,5 @@
 /** @jsxImportSource theme-ui */
-import { Container, Button } from "theme-ui";
+import { Container, Button, Box, Heading, Text } from "theme-ui";
 import { BiDownArrow } from "react-icons/bi";
 
 export default function HeroSection() {
@@ -41,6 +41,7 @@ export default function HeroSection() {
         p: {
             marginTop: '1rem',
             fontSize: '1.25rem',
+            fontFamily: 'body',
             backgroundColor: 'rgba(255, 255, 255, 0.7)',
             padding: '1rem',
             borderRadius: '10px',
@@ -58,12 +59,12 @@ export default function HeroSection() {
     }
     return (
         <Container sx={styles.container}>
-            <div style={styles.content}>
-                <h1>Early Childhood Intervention</h1>
-                <h2 style={styles.h2}>Language delay, ASD, and intellectual disabilities</h2>
-                <p style={styles.p}>La Luna Early Intervention Services provides individualised educational and developmental support for children aged 0–10 years with disabilities, developmental delays, and additional learning needs.</p>
+            <Box sx={styles.content}>
+                <Heading as="h1">Early Childhood Intervention</Heading>
+                <Heading as="h2" sx={styles.h2}>Language delay, ASD, and intellectual disabilities</Heading>
+                <Text sx={styles.p}>La Luna Early Intervention Services provides individualised educational and developmental support for children aged 0–10 years with disabilities, developmental delays, and additional learning needs.</Text>
                 <Button sx={styles.button} variant="secondary">Learn More <BiDownArrow /></Button>
-            </div>
+            </Box>
         </Container>
     )
 }

@@ -1,6 +1,6 @@
 /** @jsxImportSource theme-ui */
 import Logo from "components/Logo";
-import { Container } from "theme-ui";
+import { Container, Box } from "theme-ui";
 
 const now = new Date()
 const currentYear = now.getFullYear()
@@ -35,9 +35,6 @@ const Footer = () => {
             alignContent: 'space-evenly',
             alignItems: 'center',
             width: '95%',
-            '@media screen and (minWidth: 720px)': {
-                flexDirection: 'row'
-            }
         },
         subFooter: {
             display: 'flex',
@@ -47,13 +44,13 @@ const Footer = () => {
             borderRadius: '15px',
             fontFamily: 'body',
             fontSize: 'pre',
+            overflowWrap: 'anywhere',
             justifyContent: 'center',
             alignItems: 'center',
             width: '100%',
             minHeight: '8vh',
             zIndex: '-8',
             paddingTop: '2rem',
-            color: 'background_light'
         },
         footerLink: {
             fontSize: 'p',
@@ -67,19 +64,19 @@ const Footer = () => {
     return (
         <>
             <Container sx={styles.container}>
-                <main style={styles.content}>
-                    <div style={{ display: 'flex', flexDirection: 'column' }}>
+                <Box as="div" sx={styles.content}>
+                    <Box as="div" sx={{ display: 'flex', flexDirection: 'column' }}>
                         <a href="tel:0477555555" style={styles.footerLink}>Phone</a>
                         <a href="mailto:email@test.com" style={styles.footerLink}>Email</a>
-                    </div>
+                    </Box>
                     <Logo src='/logos/LaLuna_Logo_Full_White.svg' sx={styles.footerLink} path="#top" height={125} width={125} alt="Mai Tinh Nguyen" />
                     <Logo src="/SVG/to_top.svg" sx={styles.footerLink} path="#top" height={75} width={75} alt="Back to Top" />
-                </main>
+                </Box>
 
             </Container>
-            <section style={styles.subFooter}>
+            <Box as="div" sx={styles.subFooter}>
                 &copy; {currentYear} LaLuna Early Intervention Services. All Rights Reserved.
-            </section>
+            </Box>
         </>
 
     )
