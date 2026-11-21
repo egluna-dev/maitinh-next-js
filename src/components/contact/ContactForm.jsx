@@ -98,7 +98,45 @@ export default function ContactForm() {
             padding: '0.25rem 0.75rem',
             transition: 'all 250ms ease-in-out',
             cursor: 'pointer'
-        }
+        },
+        modalBackdrop: {
+            position: 'fixed',
+            inset: 0,
+            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 1000,
+            padding: '1rem',
+          },
+          modalCard: {
+            maxWidth: '420px',
+            width: '100%',
+            padding: '1.5rem',
+            borderRadius: '12px',
+            backgroundColor: '#fff',
+            textAlign: 'center',
+            boxShadow: '0 10px 30px rgba(0, 0, 0, 0.2)',
+          },
+          modalHeading: {
+            display: 'block',
+            marginBottom: '0.5rem',
+            fontSize: '1.15rem',
+            fontWeight: 700,
+          },
+          modalText: {
+            display: 'block',
+            marginBottom: '1.25rem',
+            fontSize: '1rem',
+            lineHeight: 1.5,
+            color: '#333',
+          },
+          closeBtn: {
+            padding: '0.6rem 1.25rem',
+            borderRadius: '6px',
+            border: 'none',
+            cursor: 'pointer',
+          },
     }
 
     const [state, handleSubmit] = useForm('mljbgpvr')
