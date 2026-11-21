@@ -38,7 +38,7 @@ function ComingSoonView() {
         gap: 3,
       }}
     >
-      <Logo src='/logos/LaLuna_Logo_Full.svg' path="/" height={175} width={175} alt='La Luna Early Intervention Services Logo'/>
+      <Logo src='/logos/LaLuna_Logo_Full_Production.svg' path="/" height={175} width={175} alt='La Luna Early Intervention Services Logo'/>
       <Heading as="h1" sx={styles.heading}>Coming Soon! </Heading>
       <Text sx={styles.text}>
         We are putting the finishing touches on our new website. Check back shortly.

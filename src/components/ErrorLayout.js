@@ -44,7 +44,7 @@ export default function Layout({ title, keywords, description, children }) {
 }
 
 Layout.defaultProps = {
-    title: 'La Luna | Melbourne Early Intervention Services',
+    title: 'LaLuna Early Intervention Services',
     description: 'Early childhood intervention for children with ASD, language delay, and intellectual disabilities',
     keywords: 'childhood, development, education, disabilities, autism, language delay, learning, children, Down Syndrome, intellectual disability'
 }

@@ -2,6 +2,9 @@
 import Logo from "components/Logo";
 import { Container } from "theme-ui";
 
+const now = new Date()
+const currentYear = now.getFullYear()
+
 const Footer = () => {
     const styles = {
         container: {
@@ -75,7 +78,7 @@ const Footer = () => {
 
             </Container>
             <section style={styles.subFooter}>
-                &copy; 2022 Mai Tinh. All Rights Reserved
+                &copy; {currentYear} LaLuna Early Intervention Services. All Rights Reserved.
             </section>
         </>
 
