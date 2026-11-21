@@ -7,6 +7,29 @@ import FormInput from "./formInput";
 import { useRef, useState, useEffect } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 
+function getFormSpreeErrorMessage(errors) {
+    if (!errors) {
+        return "There was a problem submitting your message. Please try again."
+    }
+
+    if (typeof errors.getFormErrors === "function") {
+        const formErrors = errors.getFormErrors()
+        if (formErrors && formErrors.length > 0) {
+            return formErrors.map((err) => err.message).join(" ")
+        }
+    }
+
+    if (Array.isArray(errors.formErrors) && errors.formErrors.length > 0) {
+        return errors.formErrors.map((err) => err.message).join(" ")
+    }
+
+    if (Array.isArray(errors) && errors.length >0) {
+        return errors.map((err) => err.message).join(" ")
+    }
+
+    return "Your submission could not be verified possibly due to a spam/reCAPTCHA check. Please try again or reach out directly."
+}
+
 export default function ContactForm() {
     const styles = {
         container: {
@@ -78,19 +101,33 @@ export default function ContactForm() {
         }
     }
 
-    const [status, setStatus] = useState("")
     const [state, handleSubmit] = useForm('mljbgpvr')
     const [showPopup, setShowPopup] = useState(false)
 
     useEffect (() => {
         if (state.succeeded) {
-            setShowPopup(true)
+            setShowPopup({
+                type: "success",
+                message: "Your email has been sent successfully! We will reply as soon as possible."
+            })
         }
     }, [state.succeeded])
 
+    useEffect(() => {
+        if (state.errors) {
+            setShowPopup({
+                type: "error",
+                message: getFormSpreeErrorMessage(state.errors)
+            })
+        }
+    }, [state.errors])
+
     const handleFormSubmit = async (e) => {
+        setPopup(null)
         await handleSubmit(e)
     }
+
+    const isError = popup?.type === "error"
 
     return (
         <Container sx={styles.container}>
@@ -117,16 +154,39 @@ export default function ContactForm() {
                     </Box>
                 )}
             </Box>
-            {showPopup && (
-                <Box sx={styles.modalBackdrop} role="dialog" aria-modal="true">
-                    <Box sx={styles.modalCard}>
-                        <Text sx={styles.modalText}>
-                            Your email has been sent successfully! We will reply as soon as possible.
-                        </Text>
-                        <Box as="button" type="button" onClick={() => setShowPopup(false)} sx={styles.closeBtn}>
-                            Close
-                        </Box>
+            {popup && (
+                <Box
+                sx={styles.modalBackdrop}
+                role="dialog"
+                aria-modal="true"
+                aria-live="assertive"
+                >
+                <Box
+                    sx={{
+                    ...styles.modalCard,
+                    borderTop: isError ? '4px solid #b02a37' : '4px solid #198754',
+                    }}
+                >
+                    <Text
+                    sx={{
+                        ...styles.modalHeading,
+                        color: isError ? '#842029' : '#0f5132',
+                    }}
+                    >
+                    {isError ? 'Submission Failed' : 'Message Sent'}
+                    </Text>
+
+                    <Text sx={styles.modalText}>{popup.message}</Text>
+
+                    <Box
+                    as="button"
+                    type="button"
+                    onClick={() => setPopup(null)}
+                    sx={styles.closeBtn}
+                    >
+                    {isError ? 'Try Again' : 'Close'}
                     </Box>
+                </Box>
                 </Box>
             )}
         </Container>
