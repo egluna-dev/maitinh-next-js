@@ -1,10 +1,17 @@
 import Head from 'next/head'
 
+isComingSoon = process.env.NEXT_PUBLIC_COMING_SOON === "true"
+
 export default function Layout({ title, keywords, description, children }) {
   return (
     <>
       <Head>
-        <title>{title}</title>
+        <title>
+          {isComingSoon ? "Coming Soon | LaLuna Early Intervention Services" : "LaLuna Early Intervention Services"}
+        </title>
+        {isComingSoon && (
+          <meta name="robots" content="noindex, nofollow" />
+        )}
         <meta name='keywords' content={keywords} />
         <meta name='description' content={description} />
         <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
