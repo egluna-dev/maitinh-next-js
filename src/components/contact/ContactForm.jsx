@@ -114,26 +114,30 @@ export default function ContactForm() {
             width: '100%',
             padding: '1.5rem',
             borderRadius: '12px',
-            backgroundColor: '#fff',
+            backgroundColor: 'background_dark',
             textAlign: 'center',
             boxShadow: '0 10px 30px rgba(0, 0, 0, 0.2)',
           },
           modalHeading: {
             display: 'block',
             marginBottom: '0.5rem',
-            fontSize: '1.15rem',
+            fontSize: '1.5rem',
+            fontFamily: 'heading',
             fontWeight: 700,
           },
           modalText: {
             display: 'block',
             marginBottom: '1.25rem',
             fontSize: '1rem',
+            fontFamily: 'body',
             lineHeight: 1.5,
             color: '#333',
           },
           closeBtn: {
             padding: '0.6rem 1.25rem',
+            fontFamily: 'body',
             borderRadius: '6px',
+            backgroundColor: 'primary_dark',
             border: 'none',
             cursor: 'pointer',
           },
@@ -208,7 +212,7 @@ export default function ContactForm() {
                     <Text
                     sx={{
                         ...styles.modalHeading,
-                        color: isError ? '#842029' : '#0f5132',
+                        color: isError ? 'danger' : 'success',
                     }}
                     >
                     {isError ? 'Submission Failed' : 'Message Sent'}

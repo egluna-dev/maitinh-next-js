@@ -18,7 +18,8 @@ function ComingSoonView() {
       fontFamily: 'heading',
     },
     text: {
-      maxWidth: '520px',
+      maxWidth: '90%',
+      minwidth: '50%',
       lineHeight: '1.6',
       fontFamily: 'body',
       fontSize: '1.5rem'
@@ -34,6 +35,9 @@ function ComingSoonView() {
         alignItems: 'center',
         justifyContent: 'center',
         textAlign: 'center',
+        outline: '4px solid #EFB77B',
+        outlineOffset: '-2rem',
+        height: '100vh',
         px: 3,
         gap: 3,
       }}
