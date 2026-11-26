@@ -1,19 +1,23 @@
 const headerData = [
     {
         path: 'about',
-        label: 'About'
+        label: 'About',
+        id: 'about',
     },
     {
-        path: 'services and support',
-        label: 'Services and Support'
+        path: 'services',
+        label: 'Services and Support',
+        id: 'services',
     },
     {
         path: 'pricing',
-        label: 'Pricing'
+        label: 'Pricing',
+        id: 'pricing',
     },
     {
         path: 'contact',
-        label: 'Contact'
+        label: 'Contact',
+        id: 'contact'
     },
 ];
 

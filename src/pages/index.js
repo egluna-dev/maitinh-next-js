@@ -62,12 +62,25 @@ export default function Home() {
   return (
     <Layout>
       <Header />
-      <HeroSection />
-      <ServicesAndSupport />
-      <AboutSection />
-      <PricingSection />
-      <ContactSection />
-      <Footer />
+      <Box as="section" id="hero">
+        <HeroSection />
+      </Box>
+      <Box as="section" id="services">
+        <ServicesAndSupport />
+      </Box>
+      <Box as="section" id="about">
+        <AboutSection />
+      </Box>
+      <Box as="section" id="pricing">
+        <PricingSection />
+      </Box>
+      <Box as="section" id="contact">
+        <ContactSection />
+      </Box>
+      <Box as="section" id="footer">
+        <Footer />
+      </Box>
+      
     </Layout>
   )
 }
