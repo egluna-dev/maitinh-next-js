@@ -1,22 +1,12 @@
 /** @jsxImportSource theme-ui */
-import { Container } from "theme-ui";
-import { useRef } from "react";
+import { Box } from "theme-ui";
+import { forwardRef } from "react";
 
-export default function FormInput(props) {
-
-    const {
-        placeholder,
-        name,
-        type,
-        refer,
-        isRequired
-    } = props
-
-    const firstNameRef = useRef();
+const FormInput = forwardRef(function FormInput({sx, ...props}, ref) {
 
     return (
-        <Container>
-            <input type={type} name={name} placeholder={placeholder} required={isRequired} />
-        </Container>
+        <Box as="input" ref={ref} sx={sx} {...props} />
     )
-}
+})
+
+export default FormInput

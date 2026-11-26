@@ -1,11 +1,11 @@
 /** @jsxImportSource theme-ui */
 /* eslint-disable react/no-unknown-property */
 
-import { Container, css } from "theme-ui";
-import { Box, Text } from "theme-ui";
-import FormInput from "./formInput";
-import { useRef, useState, useEffect } from "react";
-import { useForm, ValidationError } from "@formspree/react";
+import { Container } from "theme-ui"
+import { Box, Text } from "theme-ui"
+import FormInput from "./formInput"
+import { useState, useEffect, useRef } from "react"
+import { useForm, ValidationError } from "@formspree/react"
 
 function getFormSpreeErrorMessage(errors) {
     if (!errors) {
@@ -15,20 +15,28 @@ function getFormSpreeErrorMessage(errors) {
     if (typeof errors.getFormErrors === "function") {
         const formErrors = errors.getFormErrors()
         if (formErrors && formErrors.length > 0) {
+            // console.log("This is the first error message")
+            // console.log(errors.formErrors.map((err) => err.message).join(" "))
             return formErrors.map((err) => err.message).join(" ")
         }
     }
 
     if (Array.isArray(errors.formErrors) && errors.formErrors.length > 0) {
+        // console.log("This is the second error message")
+        // console.log(errors.formErrors.map((err) => err.message).join(" "))
         return errors.formErrors.map((err) => err.message).join(" ")
     }
 
     if (Array.isArray(errors) && errors.length >0) {
+        // console.log("This is the third error message")
+        // console.log(errors.map((err) => err.message).join(" "))
         return errors.map((err) => err.message).join(" ")
     }
 
     return "Your submission could not be verified possibly due to a spam/reCAPTCHA check. Please try again or reach out directly."
 }
+
+const TRANSITION_DURATION = 500
 
 export default function ContactForm() {
     const styles = {
@@ -79,12 +87,11 @@ export default function ContactForm() {
         formNames: {
             display: 'flex',
             flexDirection: 'row',
-            justifyContent: 'space-evenly',
-            margin: '0.5rem 0',
-            width: '90%',
+            justifyContent: 'space-between',
+            margin: '0.5rem 0.5rem 0.5rem 0',
+            width: '80%',
             '& input': {
-                fontFamily: 'Urbanist',
-                width: '90%',
+                width: '45%',
             }
         },
         submitButton: {
@@ -144,11 +151,28 @@ export default function ContactForm() {
     }
 
     const [state, handleSubmit] = useForm('mljbgpvr')
-    const [popup, setPopup] = useState(false)
+    const [popup, setPopup] = useState(null)
+    const [isVisible, setIsVisible] = useState(false)
+
+    const openPopup = (nextPopup) => {
+        setPopup(nextPopup)
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                setIsVisible(true)
+            })
+        })
+    }
+
+    const closePopup = () => {
+        setIsVisible(false)
+        window.setTimeout(() => {
+            setPopup(null)
+        }, TRANSITION_DURATION)
+    }
 
     useEffect (() => {
         if (state.succeeded) {
-            setPopup({
+            openPopup({
                 type: "success",
                 message: "Your email has been sent successfully! We will reply as soon as possible."
             })
@@ -157,16 +181,37 @@ export default function ContactForm() {
 
     useEffect(() => {
         if (state.errors) {
-            setPopup({
+            openPopup({
                 type: "error",
                 message: getFormSpreeErrorMessage(state.errors)
             })
         }
     }, [state.errors])
 
+    useEffect(() => {
+        if(!popup) return
+
+        const handleKeyDown = e => {
+            if(e.key === 'Escape') {
+                closePopup()
+            }
+        }
+        window.addEventListener('keydown', handleKeyDown)
+        return () => {
+            window.removeEventListener('keydown', handleKeyDown)
+        }
+    }, [popup])
+
     const handleFormSubmit = async (e) => {
+        e.preventDefault()
+
+        const formData = new FormData(e.currentTarget)
+        const payload = Object.fromEntries(formData.entries())
+
         setPopup(null)
-        await handleSubmit(e)
+        await handleSubmit({
+            ...payload
+        }) 
     }
 
     const isError = popup?.type === "error"
@@ -182,31 +227,43 @@ export default function ContactForm() {
                 <FormInput type="email" name="email" placeholder="Email *" required />
                 <ValidationError prefix="Email" field="email" errors={state.errors} />
                 <FormInput type="text" name="subject" placeholder="Subject *" required />
+                <Box sx={{display: "none"}}>
+                    <FormInput type="text" name="_gotcha" placeholder="Leave this field empty" />
+                </Box>
                 <Box as="textarea" name="message" id="contact-form" placeholder="Message *" cols="30" rows="10" maxLength="200" required></Box>
                 <ValidationError prefix="Message" field="message" errors={state.errors} />
                 <Box as="button" mr={2} type="submit" disabled={state.submitting} sx={styles.submitButton}>
                     {state.submitting ? 'Sending...' : 'Submit'}
                 </Box>
-
-                {state.errors && state.errors.length > 0 && (
-                    <Box sx={styles.errorBanner} >
-                        <Text >
-                            There was a problem sending your message. Please check your details and try again.
-                        </Text>
-                    </Box>
-                )}
             </Box>
             {popup && (
                 <Box
-                sx={styles.modalBackdrop}
+                onClick={closePopup}
+                sx={{
+                    ...styles.modalBackdrop,
+                    opacity: isVisible ? 1 : 0,
+                    pointerEvents: isVisible ? 'auto' : 'none',
+                    transition: `opacity ${TRANSITION_DURATION}ms ease-in-out`,
+                    '@media (prefers-reduced-motion: reduce)': {
+                        transition: 'none',
+                    },
+                }}
                 role="dialog"
                 aria-modal="true"
                 aria-live="assertive"
                 >
                 <Box
+                    onClick={(e) => e.stopPropagation()}
                     sx={{
-                    ...styles.modalCard,
-                    borderTop: isError ? '4px solid #b02a37' : '4px solid #198754',
+                        ...styles.modalCard,
+                        borderTop: isError ? '4px solid #b02a37' : '4px solid #198754',
+                        opacity: isVisible ? 1 : 0,
+                        transform: isVisible ? 'translateY(0) scale(1)' : 'translateY(8px) scale(0.97)',
+                        transition: `opacity ${TRANSITION_DURATION}ms ease, transform ${TRANSITION_DURATION}ms cubic-bezier(0.22, 1, 0.36, 1)`,
+                        '@media (prefers-reduced-motion: reduce)': {
+                            transition: 'none',
+                            transform: 'none',
+                        },
                     }}
                 >
                     <Text
@@ -218,12 +275,14 @@ export default function ContactForm() {
                     {isError ? 'Submission Failed' : 'Message Sent'}
                     </Text>
 
-                    <Text sx={styles.modalText}>{popup.message}</Text>
+                    <Text sx={styles.modalText}>
+                        {popup.message}
+                    </Text>
 
                     <Box
                     as="button"
                     type="button"
-                    onClick={() => setPopup(null)}
+                    onClick={closePopup}
                     sx={styles.closeBtn}
                     >
                     {isError ? 'Try Again' : 'Close'}
