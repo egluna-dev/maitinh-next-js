@@ -7,6 +7,7 @@ export default function HeroSection() {
         container: {
             display: 'flex',
             flexDirection: 'column',
+            minHeight: '60vh',
             color: 'text',
             backgroundImage: 'url("/images/AutismBanner4.jpeg")',
             backgroundPosition: '85%',
@@ -32,15 +33,17 @@ export default function HeroSection() {
         content: {
             display: 'flex',
             flexDirection: 'column',
-            alignItems: 'flex-start',
-            justifyContent: 'flex-start',
-            margin: '0 auto 2rem auto',
-            width: '85%',
+            margin: '0 auto auto auto',
+            width: '75%',
+            minHeight: '55vh',
             wordWrap: 'break-word',
+            '& h1': {
+                padding: '1.5rem 0',
+            }
         },
         p: {
-            marginTop: '1rem',
-            fontSize: '1.25rem',
+            marginTop: '3rem',
+            fontSize: ['1.25rem','1.5rem', null, null, '2rem'],
             fontFamily: 'body',
             backgroundColor: 'rgba(255, 255, 255, 0.7)',
             padding: '1rem',
@@ -48,6 +51,10 @@ export default function HeroSection() {
             color: 'text',
             width: '100%',
             height: 'auto',
+        },
+        h1: {
+            margin: '3rem',
+            padding: '5rem',
         },
         h2: {
             backgroundColor: 'rgba(255, 255, 255, 0.7)',
@@ -62,7 +69,7 @@ export default function HeroSection() {
             <Box sx={styles.content}>
                 <Heading as="h1">Early Childhood Intervention</Heading>
                 <Heading as="h2" sx={styles.h2}>Language delay, ASD, and intellectual disabilities</Heading>
-                <Text sx={styles.p}>La Luna Early Intervention Services provides individualised educational and developmental support for children aged 0–10 years with disabilities, developmental delays, and additional learning needs.</Text>
+                <Text sx={styles.p}>La Luna Early Intervention Services provides individualised educational and developmental support for children aged 0 to 10 years with disabilities, developmental delays, and additional learning needs.</Text>
                 <Button sx={styles.button} variant="secondary">Learn More <BiDownArrow /></Button>
             </Box>
         </Container>

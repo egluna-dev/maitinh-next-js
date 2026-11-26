@@ -1,5 +1,5 @@
 /** @jsxImportSource theme-ui */
-import { Container } from "theme-ui";
+import { Box, Container, Heading, Text } from "theme-ui";
 import Image from "next/image";
 
 export default function ServiceCard({ title, imageSrc, content, imgAlt }) {
@@ -38,15 +38,15 @@ export default function ServiceCard({ title, imageSrc, content, imgAlt }) {
     }
     return (
         <Container sx={styles.container}>
-            <div style={styles.contentCard}>
-                <div style={styles.image}>
+            <Box as="div" sx={styles.contentCard}>
+                <Box as="div" sx={styles.image}>
                     <Image src={imageSrc} width={300} height={200} alt={imgAlt} loading="lazy" layout="responsive" sizes="(max-width: 768px), 100vw, 33vw"/>
-                </div>
-                <h4 >{title}</h4>
-                <p>
+                </Box>
+                <Heading as="h4" >{title}</Heading>
+                <Text as="p">
                     {content}
-                </p>
-            </div>
+                </Text>
+            </Box>
         </Container>
     )
 }

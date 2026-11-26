@@ -12,12 +12,8 @@ export default function Header() {
             alignItems: 'center',
             alignContent: 'space-between',
             justifyContent: 'space-around',
-            width: '100%',
+            width: '90%',
             margin: '2rem auto',
-            '@media screen and (min-width: 1080px)': {
-                justifyContent: 'space-evenly',
-                width: '100%'
-            }
         },
         header: {
             position: 'sticky',

@@ -42,6 +42,7 @@ export default function ServicesSection() {
         justifyContent: 'center',
         alignItems: 'stretch', // Forces both cards to be the exact same height
         textAlign: 'center',
+        maxWidth: '80%',
     },
     }
 

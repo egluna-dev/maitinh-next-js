@@ -7,7 +7,7 @@ export const theme = {
     },
     fontSizes: {
         pre: '0.75rem',
-        p: '14px',
+        p: '16px',
         h1: '3.052vw',
         h2: '2.441vw',
         h3: '1.953vw',
@@ -65,5 +65,5 @@ export const theme = {
             }
         }
     },
-    breakpoints: ['600px', '900px', '1024px', '1440px'],
+    breakpoints: ['600px', '900px', '1024px', '1440px', '2560px'],
 }
